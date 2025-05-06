@@ -1,0 +1,12 @@
+requests
+pymongo
+python-dotenv
+linkedin-jobs-scraper
+selenium
+webdriver-manager
+google-generativeai
+PyPDF2
+reportlab
+pdflatex
+beautifulsoup4
+reportlab

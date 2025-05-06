@@ -1,0 +1,24 @@
+# Environment variables
+.env
+
+# Virtual environment
+venv/
+*/venv/
+.venv/
+*/.venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Output files (optional, if you don't want backups in git)
+*.json
+
+# IDE files (examples)
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
