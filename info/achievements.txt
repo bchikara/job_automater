@@ -1,0 +1,23 @@
+RECOGNITIONS, ACHIEVEMENTS, AND AWARDS
+
+========================================
+
+**Hackathon:**
+
+* Winner - Hackathon 1.0 (State Level University)
+    * Project: Helping Hands (Connecting NGOs and food beneficiaries for food donation)
+
+**Professional Awards & Achievements (Deloitte):**
+
+* Applause Award (Received 3 consecutive times)
+    * Role: Senior Software Engineer
+    * Key Contributions:
+        * Team Leadership
+        * Project Ownership
+        * Solving Complex Dashboard Algorithms
+
+**Technical Skills/Achievements:**
+
+* Consistent Problem Solver: Solved LeetCode problems consecutively for 6 months.
+
+========================================

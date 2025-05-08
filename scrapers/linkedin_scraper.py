@@ -140,7 +140,8 @@ def run_linkedin_scraper(limit=None):
 
     # Initialize scraper
     scraper = LinkedinScraper(
-        chrome_executable_path=config.CHROME_EXECUTABLE_PATH,
+        chrome_executable_path=None,  # Custom Chrome executable path (e.g. /foo/bar/bin/chromedriver)
+        chrome_binary_location=None,
         chrome_options=None, # Add options if needed (e.g., proxy)
         headless=True,
         max_workers=1,
@@ -156,12 +157,12 @@ def run_linkedin_scraper(limit=None):
     # Define search queries - TODO: Make these configurable?
     queries = [
         Query(
-            query='Software Engineer', # Example query
+            query='Frontend Software Engineer', # Example query
             options=QueryOptions(
-                locations=['United States'], # Example location
+                locations=['New York City','California','Seattle'], # Example location
                 apply_link=True,
                 skip_promoted_jobs=True,
-                page_offset=0,
+                page_offset=2,
                 limit=job_limit, # Use the determined limit
                 filters=QueryFilters(
                     relevance=RelevanceFilters.RECENT,

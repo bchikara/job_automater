@@ -89,7 +89,7 @@
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+      \small\textbf{#1} & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -135,7 +135,8 @@
 
 %-----------EXPERIENCE-----------
 % Content for this section will be inserted by resume_tailor.py
-% Ensure resume_tailor.py escapes content before inserting into \resumeSubheading and \resumeItem
+% resume_tailor.py will generate the \resumeSubheading and \resumeItem calls
+% with *escaped* content.
 \section{Experience}
   \resumeSubHeadingListStart
     % ESCAPED_EXPERIENCE_ENTRIES_GO_HERE
@@ -144,7 +145,8 @@
 
 %-----------PROJECTS-----------
 % Content for this section will be inserted by resume_tailor.py
-% Ensure resume_tailor.py escapes content before inserting into \resumeProjectHeading and \resumeItem
+% resume_tailor.py will generate the \resumeProjectHeading and \resumeItem calls
+% with *escaped* content.
 \section{Projects}
     \resumeSubHeadingListStart
        % ESCAPED_PROJECT_ENTRIES_GO_HERE
@@ -153,7 +155,7 @@
 
 %-----------TECHNICAL SKILLS-----------
 % Content for this section will be inserted by resume_tailor.py
-% Ensure resume_tailor.py escapes the skill/tool strings before inserting
+% resume_tailor.py will generate the \item calls with *escaped* skill/tool strings.
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, itemsep=1pt, topsep=2pt, parsep=0pt, label={}] % label={} removes bullets
     \item \small \textbf{Skills:} % ESCAPED_SKILLS_STRING_GOES_HERE

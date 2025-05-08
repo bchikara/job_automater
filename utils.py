@@ -1,73 +1,187 @@
+# utils.py
 import re
 import logging
+import os
+import sys
 from html import unescape
-from bs4 import BeautifulSoup # For HTML decoding
+from pathlib import Path
+from bs4 import BeautifulSoup # Preferred for HTML decoding
 
-# Configure logging for this utility module if needed, or rely on main script's config
-# logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - UTILS - %(levelname)s - %(message)s')
+# --- Path Configuration & Project Root Determination ---
+# Try to determine project root dynamically. Assumes utils.py might be nested.
+try:
+    _current_file_path = Path(__file__).resolve()
+    PROJECT_ROOT = _current_file_path.parent # Default: assume utils.py is in root
+    # Search upwards for a root marker
+    for i in range(4):
+        if (PROJECT_ROOT / 'main.py').exists() or (PROJECT_ROOT / '.git').exists() or (PROJECT_ROOT / 'pyproject.toml').exists():
+            break # Found root
+        if PROJECT_ROOT.parent == PROJECT_ROOT:
+            break # Reached filesystem root
+        PROJECT_ROOT = PROJECT_ROOT.parent
+    else: # If loop finished without finding marker
+        PROJECT_ROOT = Path(__file__).resolve().parent # Fallback
+        print(f"WARN [utils.py]: Could not find project root marker. Using directory of utils.py: {PROJECT_ROOT}")
+except NameError:
+    PROJECT_ROOT = Path.cwd() # Fallback if __file__ is not defined
+    print(f"WARN [utils.py]: __file__ not defined. Using current working directory as root: {PROJECT_ROOT}")
 
-def escape_latex(text):
+# Template directory relative to project root
+TEMPLATE_DIR = PROJECT_ROOT / 'document_generator' / 'templates'
+print(f"INFO [utils.py]: Project Root detected as: {PROJECT_ROOT}")
+print(f"INFO [utils.py]: Template Directory set to: {TEMPLATE_DIR}")
+
+
+# --- Logging Setup Function ---
+def setup_logging(name="job_automator", log_level_str="INFO", log_dir=None, log_filename="app.log"):
     """
-    Applies basic escaping for common LaTeX special characters.
-    Handles potential None input.
+    Configures root logger with console and file handlers.
     """
-    if text is None:
-        return '' # Return empty string for None input
-    if not isinstance(text, str):
+    log_level_enum = getattr(logging, log_level_str.upper(), logging.INFO)
+    formatter = logging.Formatter(
+        "%(asctime)s - %(levelname)s - [%(name)s:%(lineno)d] - %(message)s",
+        datefmt='%Y-%m-%d %H:%M:%S'
+    )
+    root_logger = logging.getLogger() # Get the root logger
+    
+    # Clear existing handlers (important if called multiple times or after basicConfig)
+    if root_logger.hasHandlers():
+        root_logger.handlers.clear()
+        
+    root_logger.setLevel(log_level_enum) # Set level on the root logger
+
+    # Console Handler
+    ch = logging.StreamHandler(sys.stdout)
+    ch.setFormatter(formatter)
+    ch.setLevel(log_level_enum) # Set level on handler
+    root_logger.addHandler(ch)
+
+    # File Handler (if directory provided)
+    if log_dir:
+        log_dir_path = Path(log_dir)
         try:
-            text = str(text) # Try converting non-strings
-        except Exception:
-             logging.warning(f"Could not convert value to string for escaping: {type(text)}", exc_info=True)
-             return '' # Return empty if conversion fails
+            log_dir_path.mkdir(parents=True, exist_ok=True)
+            log_file_path = log_dir_path / log_filename
+            fh = logging.FileHandler(log_file_path, encoding='utf-8')
+            fh.setFormatter(formatter)
+            fh.setLevel(log_level_enum) # Set level on handler
+            root_logger.addHandler(fh)
+            logging.info(f"File logging enabled at level {log_level_str}. Log file: {log_file_path}")
+        except Exception as e:
+            logging.error(f"Failed to setup file logging to {log_dir}: {e}", exc_info=True)
+    else:
+         logging.warning("File logging directory not provided. Logging to console only.")
+         
+    logging.info(f"Logging initialized for '{name}'. Level: {log_level_str}.")
+    # Modules should get their own logger via: logger = logging.getLogger(__name__)
 
-    # logging.debug(f"Attempting to escape text starting with: {text[:50]}...") # Log input
-    # Order matters, especially for backslash
+
+# --- File System Utilities ---
+def create_dir_if_not_exists(directory_path):
+    """Creates a directory if it does not already exist."""
+    logger = logging.getLogger(__name__)
+    path = Path(directory_path)
+    if not path.exists():
+        logger.info(f"Directory not found. Creating: {path}")
+        try:
+            path.mkdir(parents=True, exist_ok=True)
+        except OSError as e:
+            logger.error(f"Error creating directory {path}: {e}", exc_info=True)
+            raise
+    # else: logger.debug(f"Directory already exists: {path}")
+
+
+def sanitize_filename_component(name_part, max_length=50):
+    """Sanitizes a string to be suitable as part of a filename."""
+    logger = logging.getLogger(__name__)
+    if name_part is None: name_part = ""
+
+    try:
+        name_part_str = str(name_part).strip()
+        if not name_part_str: return "unknown"
+        # Allow alphanumeric, underscore, hyphen. Replace others with underscore.
+        sanitized = re.sub(r'[^A-Za-z0-9_\-]+', '_', name_part_str)
+        # Condense multiple underscores/hyphens
+        sanitized = re.sub(r'[_]+', '_', sanitized)
+        sanitized = re.sub(r'[-]+', '-', sanitized)
+        # Remove leading/trailing separators
+        sanitized = sanitized.strip('_-')
+        # Truncate and strip again
+        sanitized = sanitized[:max_length].strip('_-')
+        return sanitized if sanitized else "unknown"
+    except Exception as e:
+        logger.error(f"Error sanitizing component '{name_part}': {e}", exc_info=True)
+        return "error_sanitizing"
+
+
+# --- Text Processing Utilities ---
+def escape_latex(text):
+    """Escapes special LaTeX characters. Handles None input."""
+    logger = logging.getLogger(__name__)
+    if text is None: return ''
+    if not isinstance(text, str):
+        try: text = str(text)
+        except Exception:
+            logger.warning(f"Could not convert {type(text)} to string for LaTeX escape.", exc_info=True)
+            return ''
+    # LaTeX character escape mapping
     conv = {
-        # Must be first!
-        '\\': r'\textbackslash{}',
-        # Other special characters
-        '&': r'\&',
-        '%': r'\%',
-        '$': r'\$',
-        '#': r'\#',
-        '_': r'\_',
-        '{': r'\{',
-        '}': r'\}',
-        '~': r'\textasciitilde{}',
-        '^': r'\^{}',
-        # Potentially problematic characters in text mode
-        '<': r'\textless{}',
-        '>': r'\textgreater{}',
+        '\\': r'\textbackslash{}', '&': r'\&', '%': r'\%', '$': r'\$', '#': r'\#',
+        '_': r'\_', '{': r'\{', '}': r'\}', '~': r'\textasciitilde{}',
+        '^': r'\textasciicircum{}', '"': r"''", '“': r"``", '”': r"''",
+        '‘': r"`", '’': r"'", '<': r'\textless{}', '>': r'\textgreater{}',
+        '|': r'\textbar{}', '—': r'---', '–': r'--', '…': r'\dots{}',
     }
-    # Use regex to perform replacements safely
-    # This pattern finds any character in the conv keys
-    regex = re.compile('|'.join(re.escape(str(key)) for key in sorted(conv.keys(), key=len, reverse=True)))
-    escaped_text = regex.sub(lambda match: conv[match.group(0)], text)
-    # if escaped_text != text:
-    #     logging.debug(f"Escaped text result starts with: {escaped_text[:50]}...") # Log output if changed
-    # else:
-    #      logging.debug("No escaping applied to text.")
-    return escaped_text
+    pattern = '|'.join(re.escape(str(key)) for key in sorted(conv.keys(), key=len, reverse=True))
+    regex = re.compile(pattern)
+    return regex.sub(lambda match: conv[match.group(0)], text)
+
 
 def decode_html_to_text(html_content):
-    """
-    Decodes HTML entities and strips HTML tags to get plain text.
-    Handles None input.
-    """
-    if not html_content:
-        return ""
+    """Decodes HTML using BeautifulSoup for better results."""
+    logger = logging.getLogger(__name__)
+    if not html_content: return ""
     try:
-        # Use BeautifulSoup to parse HTML and get text
-        soup = BeautifulSoup(html_content, 'html.parser')
-        text = soup.get_text(separator='\n', strip=True) # Use newline as separator, strip whitespace
-        # Decode HTML entities like &amp;, &lt;, etc.
-        text = unescape(text)
-        return text
+        # Basic structure preservation: Add newlines for block-level elements
+        temp_html = str(html_content)
+        temp_html = re.sub(r'<br\s*/?>', '\n', temp_html, flags=re.I)
+        for tag in ['p', 'div', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']:
+            temp_html = re.sub(rf'</{tag}\s*>', f'</{tag}>\n', temp_html, flags=re.I)
+
+        soup = BeautifulSoup(temp_html, 'html.parser')
+        text = soup.get_text(separator=' ', strip=True) # Use space separator initially, then clean
+        text = unescape(text) # Decode entities like &amp;
+
+        # Clean up whitespace
+        text = re.sub(r'[ \t]+', ' ', text) # Consolidate spaces/tabs
+        text = re.sub(r'\n\s*\n', '\n\n', text) # Limit consecutive newlines
+        return text.strip()
     except Exception as e:
-        logging.error(f"Error decoding HTML: {e}", exc_info=True)
-        # Fallback: return the original content if decoding fails badly
-        # Or return a specific error message if preferred
-        return str(html_content)
+        logger.error(f"Error decoding HTML: {e}", exc_info=True)
+        # Fallback: basic unescape and regex tag removal
+        try:
+            fallback_text = unescape(str(html_content))
+            fallback_text = re.sub(r'<[^>]+>', ' ', fallback_text)
+            return re.sub(r'\s+', ' ', fallback_text).strip()
+        except Exception:
+            return str(html_content) # Absolute fallback
 
 
-# Add any other utility functions here if needed
+def load_template(template_filename):
+    """Loads a template file from the configured templates directory."""
+    logger = logging.getLogger(__name__)
+    if not TEMPLATE_DIR.is_dir():
+        logger.error(f"Template directory does not exist: {TEMPLATE_DIR}")
+        raise FileNotFoundError(f"Template directory missing: {TEMPLATE_DIR}")
+
+    filepath = TEMPLATE_DIR / template_filename
+    logger.info(f"Loading template: {filepath}")
+    if not filepath.is_file():
+        logger.error(f"Template file not found: {filepath}")
+        raise FileNotFoundError(f"Template file missing: {filepath}. Expected in {TEMPLATE_DIR}")
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            return f.read()
+    except Exception as e:
+        logger.error(f"Could not read template file {filepath}: {e}", exc_info=True)
+        raise
