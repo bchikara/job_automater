@@ -1,7 +1,3 @@
-from pathlib import Path
-
-# Full content for the README.md
-readme_content = """
 # 🤖 Automated Job Application Assistant
 
 ## 🎯 Project Goal
@@ -49,7 +45,7 @@ Think of it as a smart assistant that helps you apply for jobs more efficiently!
 ---
 
 > This project is a work in progress and contributions are welcome!
-"""
+
 
 
 
