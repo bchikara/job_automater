@@ -161,38 +161,90 @@ def attempt_application(job_data: dict, processed_paths: dict) -> str:
         if application_result_status == config.JOB_STATUS_APPLIED_SUCCESS:
             error_details = "" # Success
             status_reason = f"Application submitted successfully via {ats_platform}."
-        else:
-            # Application finished but reported failure internally
-             error_details = f"Filler completed with non-success status: {application_result_status}"
+        # MODIFICATION STARTS HERE
+        elif application_result_status == config.JOB_STATUS_MANUAL_INTERVENTION_SUBMITTED:
+            error_details = "User reported manual submission." # This will go into 'error_log' for tracking
+            status_reason = f"Application reported as manually submitted by user for {ats_platform}."
+        elif application_result_status == config.JOB_STATUS_MANUAL_INTERVENTION_CLOSED_BY_USER:
+            error_details = "User closed window or aborted during manual intervention."
+            status_reason = f"Application attempt closed by user during manual intervention for {ats_platform}."
+        elif application_result_status == config.JOB_STATUS_MANUAL_INTERVENTION_FAILED: # If you defined this
+            error_details = "User reported manual attempt failed after intervention."
+            status_reason = f"User reported manual attempt failed for {ats_platform} after intervention."
+        # Keep this for other statuses that might be returned by the filler (e.g., original error status if user chose 'failed')
+        elif application_result_status in [config.JOB_STATUS_APP_FAILED_ATS, config.JOB_STATUS_APP_FAILED_ATS_STEP, config.JOB_STATUS_APP_FAILED_UNEXPECTED]: # And any other direct failure statuses from config
+             error_details = f"Filler reported failure with status: {application_result_status}"
              status_reason = error_details
+        else:
+            # Application finished but reported failure internally or an unknown status
+             error_details = f"Filler completed with non-success or unrecognized status: {application_result_status}"
+             status_reason = error_details
+        # MODIFICATION ENDS HERE
 
     except base_filler.ApplicationError as app_err:
         logger.error(f"{log_prefix}Application Error ({ats_platform}): {app_err.message}")
         application_result_status = app_err.status
         error_details = f"ApplicationError: {app_err.message[:500]}"
-        status_reason = error_details
+        status_reason = error_details # This will be the reason if an ApplicationError is caught
     except Exception as e:
         logger.error(f"{log_prefix}Unexpected Exception during ATS filling ({ats_platform}): {e}", exc_info=True)
-        application_result_status = config.JOB_STATUS_APP_FAILED_ATS # Generic failure
+        # If an unexpected exception happens, and manual intervention wasn't reached or handled it,
+        # this will be the status.
+        application_result_status = config.JOB_STATUS_APP_FAILED_UNEXPECTED # Or your preferred general failure status
         error_details = f"Unexpected Exception: {str(e)[:500]}"
         status_reason = error_details
     finally:
         browser_utils.close_webdriver() # Ensure browser closes
 
     # --- 5. Handle Final Outcome ---
-    final_status = application_result_status
-    dest_dir_path = processed_paths["success"] if final_status == config.JOB_STATUS_APPLIED_SUCCESS else processed_paths["failure"]
+    # --- 5. Handle Final Outcome ---
+    final_status = application_result_status # This now reflects any manual intervention outcome
+
+    # MODIFICATION STARTS HERE: Determine destination directory
+    if final_status == config.JOB_STATUS_APPLIED_SUCCESS or \
+       final_status == config.JOB_STATUS_MANUAL_INTERVENTION_SUBMITTED:
+        dest_dir_path = processed_paths["success"]
+        logger.info(f"{log_prefix}Application outcome is success-like. Target folder: {dest_dir_path}")
+    # Optional: Create a separate folder for user-closed applications if desired
+    # elif final_status == config.JOB_STATUS_MANUAL_INTERVENTION_CLOSED_BY_USER:
+    #    # Ensure "manual_closed" key exists in processed_paths if you use this
+    #    manual_closed_dir = Path(config.PROCESSED_DIR) / "manual_closed" 
+    #    manual_closed_dir.mkdir(parents=True, exist_ok=True) # Create if not exists
+    #    dest_dir_path = str(manual_closed_dir) 
+    #    logger.info(f"{log_prefix}Application outcome is user_closed. Target folder: {dest_dir_path}")
+    else: # All other statuses (failures, errors, manual_closed (if not handled above), manual_failed)
+        dest_dir_path = processed_paths["failure"]
+        logger.info(f"{log_prefix}Application outcome is failure-like. Target folder: {dest_dir_path}")
+    # MODIFICATION ENDS HERE
+
     moved_path = _move_processed_folder(source_doc_dir, dest_dir_path)
     final_folder_path = moved_path or source_doc_dir # Track final location
 
     # Final DB update
     db_update = {'status': final_status, 'status_reason': status_reason}
-    if final_folder_path and final_folder_path != source_doc_dir : db_update['job_specific_output_dir'] = final_folder_path
-    if final_status == config.JOB_STATUS_APPLIED_SUCCESS: db_update['submitted_at'] = datetime.datetime.now(datetime.timezone.utc)
-    if error_details and final_status != config.JOB_STATUS_APPLIED_SUCCESS: db_update['error_log'] = error_details
+    if final_folder_path and final_folder_path != source_doc_dir : 
+        db_update['job_specific_output_dir'] = final_folder_path
+    
+    # MODIFICATION STARTS HERE: Handle 'submitted_at' and 'error_log'
+    if final_status == config.JOB_STATUS_APPLIED_SUCCESS or \
+       final_status == config.JOB_STATUS_MANUAL_INTERVENTION_SUBMITTED:
+        db_update['submitted_at'] = datetime.datetime.now(datetime.timezone.utc)
+        # If JOB_STATUS_MANUAL_INTERVENTION_SUBMITTED, error_details currently holds "User reported manual submission."
+        # You might want to clear error_details for the DB if this is considered a pure success.
+        # if final_status == config.JOB_STATUS_MANUAL_INTERVENTION_SUBMITTED:
+        #     error_details = "" # Uncomment if you don't want "User reported..." in error_log for this case
+
+    # Only populate 'error_log' if 'error_details' has content and it's not a clean success.
+    # For JOB_STATUS_MANUAL_INTERVENTION_SUBMITTED, error_details will be "User reported manual submission."
+    # which is useful information, so we might keep it.
+    # For clean JOB_STATUS_APPLIED_SUCCESS, error_details is already "".
+    if error_details: # This means if error_details is not None and not an empty string
+        db_update['error_log'] = error_details
+    # MODIFICATION ENDS HERE
+        
     db_update['last_attempted_at'] = datetime.datetime.now(datetime.timezone.utc)
 
     database.update_job_data(primary_id, db_update)
-    logger.info(f"{log_prefix}Final application status: {final_status}. Folder location: {final_folder_path}")
+    logger.info(f"{log_prefix}Final application status: {final_status}. Folder location: {final_folder_path}. Reason: {status_reason}")
 
     return final_status

@@ -23,7 +23,7 @@ else:
 
 
 # --- Secrets ---
-LINKEDIN_SESSION_COOKIE = 'AQEDAVqMlrsAzzPNAAABlqzI6AsAAAGW0NVsC00ARMaBux8XNRsACPW2X-kxXUA56cBGL8GdraJnq3xQCA5JrVsbmh7d8xVwcsI-zGkxej_6Nr7AqVX8AdvO9MKAl1IGc9zaaKcJK6HLyB47A3Xjr7Io'
+LINKEDIN_SESSION_COOKIE = os.getenv('LINKEDIN_LI_AT_COOKIE')
 JOBRIGHT_COOKIE_STRING = os.getenv('JOBRIGHT_COOKIE_STRING')
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 
@@ -33,16 +33,14 @@ DB_NAME = os.getenv('DB_NAME', "job_agent_db")
 
 # --- Personal Information ---
 YOUR_NAME = os.getenv('YOUR_NAME', 'Bhupesh Chikara')
-YOUR_NAME = os.getenv('YOUR_NAME', 'Bhupesh Chikara')
-YOUR_NAME = os.getenv('YOUR_NAME', 'Bhupesh Chikara')
+FIRST_NAME = os.getenv('FIRST_NAME', 'Bhupesh')
+LAST_NAME = os.getenv('LAST_NAME', 'Chikara')
 YOUR_PHONE = os.getenv('YOUR_PHONE', '+1-3155757385')
 YOUR_EMAIL = os.getenv('YOUR_EMAIL', 'bchikara@syr.edu')
 YOUR_LINKEDIN_URL = os.getenv('YOUR_LINKEDIN_PROFILE_URL')
 YOUR_GITHUB_URL = os.getenv('YOUR_GITHUB_URL')
 YOUR_LEETCODE_URL = os.getenv('YOUR_LEETCODE_URL')
 WEBSITE="bchikara.com"
-FIRST_NAME="Bhupesh"
-LAST_NAME="Chikara"
 LOCATION="New York"
 
 
@@ -111,6 +109,23 @@ JOB_STATUS_GENERATION_FAILED = "generation_failed"; JOB_STATUS_DOCS_READY = "doc
 JOB_STATUS_APP_IN_PROGRESS = "application_in_progress"; JOB_STATUS_APPLIED_SUCCESS = "applied_success"
 JOB_STATUS_APP_FAILED_ATS = "application_failed_ats"; JOB_STATUS_APP_FAILED_MANUAL = "application_failed_manual"
 JOB_STATUS_APP_SKIPPED = "application_skipped"; JOB_STATUS_ERROR_UNKNOWN = "error_unknown"
+# In your config.py file
+JOB_STATUS_APP_FAILED_ATS = "application_failed_ats"
+JOB_STATUS_APP_FAILED_ATS_STEP = "application_failed_ats_step"  
+JOB_STATUS_APP_FAILED_UNEXPECTED = "application_failed_unexpected_error" 
+# In config.py
+
+# ... existing statuses ...
+JOB_STATUS_APP_FAILED_ATS = "application_failed_ats"
+JOB_STATUS_APP_FAILED_ATS_STEP = "application_failed_ats_step" # Assuming you've added/kept this
+JOB_STATUS_APP_FAILED_UNEXPECTED = "application_failed_unexpected" # Assuming you've added/kept this
+JOB_STATUS_APPLIED_SUCCESS = "application_applied_success"
+
+# New statuses for manual intervention
+JOB_STATUS_MANUAL_INTERVENTION_SUBMITTED = "manual_intervention_submitted_by_user"
+JOB_STATUS_MANUAL_INTERVENTION_CLOSED_BY_USER = "manual_intervention_closed_by_user"
+JOB_STATUS_MANUAL_INTERVENTION_FAILED = "manual_intervention_failed_by_user" # If user indicates they tried but failed
+# ... other configurations ...
 
 # --- PDFLaTeX Path (Optional) ---
 PDFLATEX_PATH = os.getenv("PDFLATEX_PATH")
