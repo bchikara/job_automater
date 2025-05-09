@@ -33,11 +33,18 @@ DB_NAME = os.getenv('DB_NAME', "job_agent_db")
 
 # --- Personal Information ---
 YOUR_NAME = os.getenv('YOUR_NAME', 'Bhupesh Chikara')
+YOUR_NAME = os.getenv('YOUR_NAME', 'Bhupesh Chikara')
+YOUR_NAME = os.getenv('YOUR_NAME', 'Bhupesh Chikara')
 YOUR_PHONE = os.getenv('YOUR_PHONE', '+1-3155757385')
 YOUR_EMAIL = os.getenv('YOUR_EMAIL', 'bchikara@syr.edu')
 YOUR_LINKEDIN_URL = os.getenv('YOUR_LINKEDIN_PROFILE_URL')
 YOUR_GITHUB_URL = os.getenv('YOUR_GITHUB_URL')
 YOUR_LEETCODE_URL = os.getenv('YOUR_LEETCODE_URL')
+WEBSITE="bchikara.com"
+FIRST_NAME="Bhupesh"
+LAST_NAME="Chikara"
+LOCATION="New York"
+
 
 default_linkedin_text = YOUR_LINKEDIN_URL.replace("https://", "").replace("http://", "").replace("www.", "") if YOUR_LINKEDIN_URL else ""
 YOUR_LINKEDIN_URL_TEXT = os.getenv('YOUR_LINKEDIN_URL_TEXT', default_linkedin_text)

@@ -129,7 +129,9 @@ def attempt_application(job_data: dict, processed_paths: dict) -> str:
     # --- 3. Prepare User Profile & Docs ---
     # TODO: Load user_profile more dynamically (e.g., parse base_resume.json)
     user_profile = { "full_name": config.YOUR_NAME, "email": config.YOUR_EMAIL, "phone": config.YOUR_PHONE,
-                     "linkedin": config.YOUR_LINKEDIN_URL, "github": config.YOUR_GITHUB_URL }
+                     "linkedin": config.YOUR_LINKEDIN_URL, "github": config.YOUR_GITHUB_URL, 
+                     "website":config.WEBSITE,
+                     "first_name":config.FIRST_NAME,"last_name":config.LAST_NAME,"location":config.LOCATION }
     document_paths = { "resume": job_data.get("resume_pdf_path"), "cover_letter": job_data.get("cover_letter_pdf_path") }
     if not document_paths.get("resume") or not Path(document_paths["resume"]).is_file():
         logger.error(f"{log_prefix}Cannot apply: Resume PDF missing or invalid path: {document_paths.get('resume')}")
