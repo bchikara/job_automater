@@ -16,11 +16,8 @@ if str(PROJECT_ROOT) not in sys.path:
 
 # --- Import Custom Modules ---
 # Basic config needed early for logging setup if possible
-try:
-    import config
-except ImportError:
-    print("CRITICAL ERROR: Cannot import config.py. Check file location and PYTHONPATH.", file=sys.stderr)
-    sys.exit(1)
+
+import config
 
 # Setup logging using config values
 try:

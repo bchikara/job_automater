@@ -1,5 +1,7 @@
 # 🤖 Automated Job Application Assistant
 
+![Job Agent Preview](preview/job_agent.gif)
+
 ## 🎯 Project Goal
 
 This project, the "Automated Job Application Assistant," aims to simplify and automate the often repetitive process of applying for jobs online. It uses web automation to fill out application forms, can leverage Artificial Intelligence (AI) to help answer questions, and keeps track of all applications in a database.

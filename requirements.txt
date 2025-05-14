@@ -7,6 +7,7 @@ webdriver-manager
 google-generativeai
 PyPDF2
 reportlab
-pdflatex
 beautifulsoup4
 reportlab
+dotenv
+langchain_google_genai

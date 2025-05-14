@@ -1,0 +1,524 @@
+2025-05-09 00:28:05 - INFO - [root:69] - File logging enabled at level INFO. Log file: /Users/vipul/Desktop/Project/job_agent/logs/app.log
+2025-05-09 00:28:05 - INFO - [root:75] - Logging initialized for 'job_automator'. Level: INFO.
+2025-05-09 00:28:05 - INFO - [job_automator.main:30] - --- main.py execution started (Log Level: INFO) ---
+2025-05-09 00:28:05 - INFO - [job_automator.main:31] - Project Root: /Users/vipul/Desktop/Project/job_agent
+2025-05-09 00:28:05 - INFO - [job_automator.main:32] - Logging to directory: /Users/vipul/Desktop/Project/job_agent/logs
+2025-05-09 00:28:05 - INFO - [root:19] - resume_tailor/tailor.py module loading...
+2025-05-09 00:28:05 - INFO - [root:25] - Configuring Gemini API client...
+2025-05-09 00:28:05 - INFO - [root:32] - Attempting to initialize Gemini model: gemini-1.5-flash-latest...
+2025-05-09 00:28:05 - INFO - [root:49] - Gemini API configured successfully with model: gemini-1.5-flash-latest for JSON output.
+2025-05-09 00:28:05 - INFO - [root:58] - Gemini client configuration status: Success
+2025-05-09 00:28:06 - INFO - [job_automator.main:50] - Project modules imported successfully.
+2025-05-09 00:28:06 - INFO - [job_automator.main:257] - ====== Pipeline Start: 2025-05-09T04:28:06.149920+00:00 ======
+2025-05-09 00:28:06 - INFO - [job_automator.main:260] - Connecting to database...
+2025-05-09 00:28:06 - INFO - [database:25] - Attempting to establish MongoDB connection...
+2025-05-09 00:28:06 - INFO - [database:36] - Connecting to MongoDB using URI: mongodb://localhost:27017/... Database: job_agent_db
+2025-05-09 00:28:06 - INFO - [database:39] - MongoDB server ping successful.
+2025-05-09 00:28:06 - INFO - [database:42] - MongoDB connection successful. Using DB: 'job_agent_db', Collection: 'jobs'
+2025-05-09 00:28:06 - INFO - [database:75] - Database indexes ensured.
+2025-05-09 00:28:06 - INFO - [job_automator.main:260] - Database connection successful.
+2025-05-09 00:28:06 - INFO - [job_automator.main:262] - --- Phase 1: Skipping Scrapers (Default) ---
+2025-05-09 00:28:06 - INFO - [job_automator.main:263] - --- Phase 2: Processing Jobs (Tailoring & PDF Generation) ---
+2025-05-09 00:28:06 - INFO - [job_automator.main:191] - ----- Starting Job Processing Run (Tailoring & Docs) -----
+2025-05-09 00:28:06 - INFO - [job_automator.main:195] - No jobs in states (new, tailoring_failed, generation_failed) to process.
+2025-05-09 00:28:06 - INFO - [job_automator.main:264] - --- Phase 3: Processing Applications (Applying for Jobs) ---
+2025-05-09 00:28:06 - INFO - [job_automator.main:218] - ----- Starting Job Application Phase -----
+2025-05-09 00:28:06 - INFO - [job_automator.main:220] - No jobs found with status 'docs_ready' to apply.
+2025-05-09 00:28:06 - INFO - [job_automator.main:268] - Closing database connection...
+2025-05-09 00:28:06 - INFO - [database:58] - MongoDB connection closed.
+2025-05-09 00:28:06 - INFO - [job_automator.main:270] - ====== Pipeline End: 2025-05-09T04:28:06.185260+00:00. Duration: 0.04 sec ======
+2025-05-09 00:28:47 - INFO - [root:69] - File logging enabled at level INFO. Log file: /Users/vipul/Desktop/Project/job_agent/logs/app.log
+2025-05-09 00:28:47 - INFO - [root:75] - Logging initialized for 'job_automator'. Level: INFO.
+2025-05-09 00:28:47 - INFO - [job_automator.main:30] - --- main.py execution started (Log Level: INFO) ---
+2025-05-09 00:28:47 - INFO - [job_automator.main:31] - Project Root: /Users/vipul/Desktop/Project/job_agent
+2025-05-09 00:28:47 - INFO - [job_automator.main:32] - Logging to directory: /Users/vipul/Desktop/Project/job_agent/logs
+2025-05-09 00:28:47 - INFO - [root:19] - resume_tailor/tailor.py module loading...
+2025-05-09 00:28:47 - INFO - [root:25] - Configuring Gemini API client...
+2025-05-09 00:28:47 - INFO - [root:32] - Attempting to initialize Gemini model: gemini-1.5-flash-latest...
+2025-05-09 00:28:47 - INFO - [root:49] - Gemini API configured successfully with model: gemini-1.5-flash-latest for JSON output.
+2025-05-09 00:28:47 - INFO - [root:58] - Gemini client configuration status: Success
+2025-05-09 00:28:47 - INFO - [job_automator.main:50] - Project modules imported successfully.
+2025-05-09 00:28:47 - INFO - [job_automator.main:257] - ====== Pipeline Start: 2025-05-09T04:28:47.509848+00:00 ======
+2025-05-09 00:28:47 - INFO - [job_automator.main:260] - Connecting to database...
+2025-05-09 00:28:47 - INFO - [database:25] - Attempting to establish MongoDB connection...
+2025-05-09 00:28:47 - INFO - [database:36] - Connecting to MongoDB using URI: mongodb://localhost:27017/... Database: job_agent_db
+2025-05-09 00:28:47 - INFO - [database:39] - MongoDB server ping successful.
+2025-05-09 00:28:47 - INFO - [database:42] - MongoDB connection successful. Using DB: 'job_agent_db', Collection: 'jobs'
+2025-05-09 00:28:47 - INFO - [database:75] - Database indexes ensured.
+2025-05-09 00:28:47 - INFO - [job_automator.main:260] - Database connection successful.
+2025-05-09 00:28:47 - INFO - [job_automator.main:262] - --- Phase 1: Skipping Scrapers (Default) ---
+2025-05-09 00:28:47 - INFO - [job_automator.main:263] - --- Phase 2: Processing Jobs (Tailoring & PDF Generation) ---
+2025-05-09 00:28:47 - INFO - [job_automator.main:191] - ----- Starting Job Processing Run (Tailoring & Docs) -----
+2025-05-09 00:28:47 - INFO - [job_automator.main:196] - Found 1 jobs to process.
+2025-05-09 00:28:47 - INFO - [job_automator.main:200] - --- Starting processing job: https://linkedin.com/jobs/view/4223058960 ---
+2025-05-09 00:28:47 - INFO - [job_automator.main:110] - [https://linkedin.com/jobs/view/4223058960] Processing job: 'Software Engineer, Consumer Platform with verification' at 'Upstart'
+2025-05-09 00:28:47 - INFO - [utils:85] - Directory not found. Creating: /Users/vipul/Desktop/Project/job_agent/output_documents
+2025-05-09 00:28:47 - INFO - [utils:85] - Directory not found. Creating: /Users/vipul/Desktop/Project/job_agent/output_documents/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0
+2025-05-09 00:28:47 - INFO - [job_automator.main:121] - [https://linkedin.com/jobs/view/4223058960] Output directory set: /Users/vipul/Desktop/Project/job_agent/output_documents/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0
+2025-05-09 00:28:47 - INFO - [database:137] - DB: Updating status for https://linkedin.com/jobs/view/4223058960 to 'processing'. Reason: 'Starting tailoring.'
+2025-05-09 00:28:47 - INFO - [job_automator.main:137] - [https://linkedin.com/jobs/view/4223058960] Generating tailored LaTeX documents via tailor module...
+2025-05-09 00:28:47 - INFO - [root:386] - Starting combined tailoring for job: 'Software Engineer, Consumer Platform with verification' at 'Upstart'
+2025-05-09 00:28:47 - INFO - [root:396] - Loading base resume data and achievements...
+2025-05-09 00:28:47 - INFO - [root:257] - Loading base resume data from: /Users/vipul/Desktop/Project/job_agent/base_resume.json
+2025-05-09 00:28:47 - INFO - [root:261] - Base resume data loaded successfully.
+2025-05-09 00:28:47 - INFO - [root:427] - Constructing resume prompt for Gemini...
+2025-05-09 00:28:47 - INFO - [root:515] - Sending resume tailoring request to Gemini API...
+2025-05-09 00:28:54 - INFO - [root:528] - Successfully received and parsed tailored resume data from Gemini.
+2025-05-09 00:28:54 - INFO - [root:537] - Gemini resume response structure validated.
+2025-05-09 00:28:54 - INFO - [root:554] - Assembling final resume LaTeX string...
+2025-05-09 00:28:54 - INFO - [root:561] - Final tailored resume LaTeX string assembled.
+2025-05-09 00:28:54 - INFO - [root:570] - Proceeding to cover letter generation...
+2025-05-09 00:28:54 - INFO - [utils:178] - Loading template: /Users/vipul/Desktop/Project/job_agent/document_generator/templates/cover_letter_template.tex
+2025-05-09 00:28:54 - INFO - [root:659] - Attempting Gemini API call for cover letter body...
+2025-05-09 00:28:57 - INFO - [root:670] - Successfully generated and parsed cover letter body from Gemini.
+2025-05-09 00:28:57 - INFO - [root:717] - Cover letter LaTeX string assembled.
+2025-05-09 00:28:57 - INFO - [root:724] - Exiting generate_tailored_latex_docs function.
+2025-05-09 00:28:57 - INFO - [job_automator.main:141] - [https://linkedin.com/jobs/view/4223058960] Tailoring successful. Resume generated. CL generated.
+2025-05-09 00:28:57 - INFO - [job_automator.main:155] - [https://linkedin.com/jobs/view/4223058960] Generating PDF documents into: /Users/vipul/Desktop/Project/job_agent/output_documents/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0...
+2025-05-09 00:28:57 - INFO - [document_generator.generator:158] - Entering create_documents. Target dir: /Users/vipul/Desktop/Project/job_agent/output_documents/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0
+2025-05-09 00:28:57 - INFO - [document_generator.generator:54] - Temp .tex written: Resume.tex in Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0
+2025-05-09 00:28:57 - INFO - [document_generator.generator:69] - Running pdflatex pass 1 for Resume.tex...
+2025-05-09 00:28:57 - INFO - [document_generator.generator:69] - Running pdflatex pass 2 for Resume.tex...
+2025-05-09 00:28:58 - INFO - [document_generator.generator:90] - Successfully generated PDF: Resume.pdf
+2025-05-09 00:28:58 - INFO - [document_generator.generator:54] - Temp .tex written: CoverLetter.tex in Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0
+2025-05-09 00:28:58 - INFO - [document_generator.generator:69] - Running pdflatex pass 1 for CoverLetter.tex...
+2025-05-09 00:28:58 - INFO - [document_generator.generator:69] - Running pdflatex pass 2 for CoverLetter.tex...
+2025-05-09 00:28:59 - INFO - [document_generator.generator:90] - Successfully generated PDF: CoverLetter.pdf
+2025-05-09 00:28:59 - INFO - [document_generator.generator:102] - Attempting Job Details PDF creation: Job_Details_Report.pdf in Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0
+2025-05-09 00:28:59 - INFO - [document_generator.generator:141] - Successfully generated Job Details PDF: Job_Details_Report.pdf
+2025-05-09 00:28:59 - INFO - [document_generator.generator:184] - Exiting create_documents.
+2025-05-09 00:28:59 - INFO - [job_automator.main:173] - [https://linkedin.com/jobs/view/4223058960] PDF generation successful.
+2025-05-09 00:28:59 - INFO - [job_automator.main:202] - --- Successfully processed job (Docs Ready): https://linkedin.com/jobs/view/4223058960 ---
+2025-05-09 00:29:00 - INFO - [job_automator.main:210] - ----- Job Processing Run Finished -----
+2025-05-09 00:29:00 - INFO - [job_automator.main:211] - Attempted: 1 jobs. Docs generated for: 1.
+2025-05-09 00:29:00 - INFO - [job_automator.main:264] - --- Phase 3: Processing Applications (Applying for Jobs) ---
+2025-05-09 00:29:00 - INFO - [job_automator.main:218] - ----- Starting Job Application Phase -----
+2025-05-09 00:29:00 - INFO - [job_automator.main:221] - Found 1 jobs ready for application attempt.
+2025-05-09 00:29:00 - INFO - [job_automator.main:239] - --- Attempting application for job: https://linkedin.com/jobs/view/4223058960 ---
+2025-05-09 00:29:00 - INFO - [job_automator.automator_main:108] - [https://linkedin.com/jobs/view/4223058960] Attempting ATS application for URL: https://boards.greenhouse.io/embed/job_app?token=6856146&gh_src=8c01b2f01
+2025-05-09 00:29:00 - INFO - [database:137] - DB: Updating status for https://linkedin.com/jobs/view/4223058960 to 'application_in_progress'. Reason: 'Identifying ATS platform.'
+2025-05-09 00:29:00 - INFO - [job_automator.ats_identifier:40] - ATS identified as 'greenhouse' for URL: https://boards.greenhouse.io/embed/job_app?token=6856146&gh_src=8c01b2f01
+2025-05-09 00:29:00 - INFO - [database:137] - DB: Updating status for https://linkedin.com/jobs/view/4223058960 to 'application_in_progress'. Reason: 'Initializing greenhouse filler.'
+2025-05-09 00:29:00 - INFO - [job_automator.browser_utils:28] - Initializing WebDriver: Type=chrome, Headless=False
+2025-05-09 00:29:00 - INFO - [WDM:11] - ====== WebDriver manager ======
+2025-05-09 00:29:05 - INFO - [WDM:11] - Get LATEST chromedriver version for google-chrome
+2025-05-09 00:29:05 - INFO - [WDM:11] - Get LATEST chromedriver version for google-chrome
+2025-05-09 00:29:05 - INFO - [WDM:11] - Get LATEST chromedriver version for google-chrome
+2025-05-09 00:29:05 - INFO - [WDM:11] - WebDriver version 136.0.7103.92 selected
+2025-05-09 00:29:05 - INFO - [WDM:11] - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.92/mac-arm64/chromedriver-mac-arm64.zip
+2025-05-09 00:29:05 - INFO - [WDM:11] - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.92/mac-arm64/chromedriver-mac-arm64.zip
+2025-05-09 00:29:06 - INFO - [WDM:11] - Driver downloading response is 200
+2025-05-09 00:29:06 - INFO - [WDM:11] - Get LATEST chromedriver version for google-chrome
+2025-05-09 00:29:06 - INFO - [WDM:11] - Driver has been saved in cache [/Users/vipul/.wdm/drivers/chromedriver/mac64/136.0.7103.92]
+2025-05-09 00:29:07 - INFO - [job_automator.browser_utils:55] - Chrome WebDriver initialized successfully via webdriver-manager.
+2025-05-09 00:29:07 - INFO - [job_automator.browser_utils:79] - Chrome WebDriver Ready.
+2025-05-09 00:29:07 - INFO - [job_automator.automator_main:156] - [https://linkedin.com/jobs/view/4223058960] Instantiating and running GreenhouseFiller...
+2025-05-09 00:29:07 - INFO - [job_automator.intelligence.llm_clients:34] - Initializing LLM client (Gemini)...
+2025-05-09 00:29:07 - INFO - [job_automator.intelligence.llm_clients:50] - ChatGoogleGenerativeAI initialized successfully with model: gemini-1.5-flash-latest
+2025-05-09 00:29:07 - INFO - [GreenhouseFiller:879] - [GreenhouseFiller - JobID: unknown_id] Navigating to application start URL: https://boards.greenhouse.io/embed/job_app?token=6856146&gh_src=8c01b2f01
+2025-05-09 00:29:10 - INFO - [GreenhouseFiller:486] - [GreenhouseFiller - JobID: unknown_id] Navigated to https://boards.greenhouse.io/embed/job_app?token=6856146&gh_src=8c01b2f01.
+2025-05-09 00:29:10 - INFO - [GreenhouseFiller:242] - [GreenhouseFiller - JobID: unknown_id] Sending chunk 1/1 to AI for 'basic_info_unknown_id'. Size: 23416 chars.
+2025-05-09 00:29:19 - INFO - [GreenhouseFiller:267] - [GreenhouseFiller - JobID: unknown_id] Successfully processed AI response for chunk 1/1.
+2025-05-09 00:29:19 - INFO - [GreenhouseFiller:308] - [GreenhouseFiller - JobID: unknown_id] Completed AI analysis for 'basic_info_unknown_id'.
+2025-05-09 00:29:19 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'First Name' (Type: text)
+2025-05-09 00:29:20 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Last Name' (Type: text)
+2025-05-09 00:29:20 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Email' (Type: text)
+2025-05-09 00:29:20 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Phone' (Type: text)
+2025-05-09 00:29:21 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'LinkedIn Profile' (Type: text)
+2025-05-09 00:29:21 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Website' (Type: text)
+2025-05-09 00:29:21 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Location (City)' (Type: text)
+2025-05-09 00:29:22 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Location Preference' (Type: checkbox)
+2025-05-09 00:29:22 - INFO - [GreenhouseFiller:626] - [GreenhouseFiller - JobID: unknown_id] Attempting to click checkbox for 'Location Preference' using locator ['name', 'job_application[answers_attributes][2][answer_selected_options_attributes][3][question_option_id]']
+2025-05-09 00:29:22 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Resume/CV' (Type: file)
+2025-05-09 00:29:22 - WARNING - [GreenhouseFiller:643] - [GreenhouseFiller - JobID: unknown_id] No 'document_type' specified for file field: Resume/CV
+2025-05-09 00:29:22 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Resume/CV' (Type: file). Required: True
+2025-05-09 00:29:22 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Have you been employed by Upstart before?' (Type: select)
+2025-05-09 00:29:25 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '0' not found in Have you been employed by Upstart before?. (non-fatal)
+2025-05-09 00:29:25 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Have you been employed by Upstart before?' (Type: select). Required: True
+2025-05-09 00:29:25 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Are you authorized to work lawfully in the United States for Upstart?' (Type: select)
+2025-05-09 00:29:28 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '1' not found in Are you authorized to work lawfully in the United States for Upstart?. (non-fatal)
+2025-05-09 00:29:28 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Are you authorized to work lawfully in the United States for Upstart?' (Type: select). Required: True
+2025-05-09 00:29:28 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Will you now or in the future require sponsorship for employment visa status?' (Type: select)
+2025-05-09 00:29:31 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '0' not found in Will you now or in the future require sponsorship for employment visa status?. (non-fatal)
+2025-05-09 00:29:31 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Will you now or in the future require sponsorship for employment visa status?' (Type: select). Required: False
+2025-05-09 00:29:31 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Gender' (Type: select)
+2025-05-09 00:29:34 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '3' not found in Gender. (non-fatal)
+2025-05-09 00:29:34 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Gender' (Type: select). Required: True
+2025-05-09 00:29:34 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Are you Hispanic/Latino?' (Type: select)
+2025-05-09 00:29:37 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '3' not found in Are you Hispanic/Latino?. (non-fatal)
+2025-05-09 00:29:37 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Are you Hispanic/Latino?' (Type: select). Required: True
+2025-05-09 00:29:37 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Please identify your race' (Type: select)
+2025-05-09 00:29:41 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '8' not found in Please identify your race. (non-fatal)
+2025-05-09 00:29:41 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Please identify your race' (Type: select). Required: True
+2025-05-09 00:29:41 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Veteran Status' (Type: select)
+2025-05-09 00:29:44 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '3' not found in Veteran Status. (non-fatal)
+2025-05-09 00:29:44 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Veteran Status' (Type: select). Required: True
+2025-05-09 00:29:44 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Disability Status' (Type: select)
+2025-05-09 00:29:47 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '3' not found in Disability Status. (non-fatal)
+2025-05-09 00:29:47 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Disability Status' (Type: select). Required: True
+2025-05-09 00:29:47 - ERROR - [GreenhouseFiller:1085] - Caught ApplicationError: Basic info step failed. Initiating manual intervention.
+2025-05-09 00:29:47 - INFO - [GreenhouseFiller:1000] - ‼️ APPLICATION ERROR: Basic info step failed (Status: application_failed_ats_step)
+2025-05-09 00:29:47 - INFO - [GreenhouseFiller:1001] - ⏸️ PAUSING FOR MANUAL INTERVENTION. The browser window remains open.
+2025-05-09 00:29:47 - INFO - [GreenhouseFiller:1002] - Please attempt to complete/fix the application manually in the browser.
+2025-05-09 00:29:47 - INFO - [GreenhouseFiller:1003] - Once done, or if you close the window, please respond in THIS console window.
+2025-05-09 00:29:58 - INFO - [GreenhouseFiller:1022] - User indicated: Application was manually submitted.
+2025-05-09 00:29:58 - INFO - [job_automator.browser_utils:94] - Closing WebDriver instance.
+2025-05-09 00:29:58 - INFO - [job_automator.automator_main:207] - [https://linkedin.com/jobs/view/4223058960] Application outcome is success-like. Target folder: /Users/vipul/Desktop/Project/job_agent/processed_applications/success
+2025-05-09 00:29:58 - WARNING - [job_automator.automator_main:55] - [Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0] Destination path '/Users/vipul/Desktop/Project/job_agent/processed_applications/success/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0' already exists. Removing existing before move.
+2025-05-09 00:29:58 - INFO - [job_automator.automator_main:58] - [Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0] Moving processed folder from '/Users/vipul/Desktop/Project/job_agent/output_documents/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0' to '/Users/vipul/Desktop/Project/job_agent/processed_applications/success/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0'
+2025-05-09 00:29:58 - INFO - [job_automator.automator_main:60] - [Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0] Folder moved successfully.
+2025-05-09 00:29:58 - INFO - [job_automator.automator_main:248] - [https://linkedin.com/jobs/view/4223058960] Final application status: manual_intervention_submitted_by_user. Folder location: /Users/vipul/Desktop/Project/job_agent/processed_applications/success/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0. Reason: Application reported as manually submitted by user for greenhouse.
+2025-05-09 00:29:58 - INFO - [job_automator.main:242] - --- Application attempt result for https://linkedin.com/jobs/view/4223058960: manual_intervention_submitted_by_user ---
+2025-05-09 00:29:58 - WARNING - [job_automator.main:246] - [https://linkedin.com/jobs/view/4223058960] Unexpected result status from automator: manual_intervention_submitted_by_user
+2025-05-09 00:30:08 - INFO - [job_automator.main:252] - ----- Job Application Phase Finished -----
+2025-05-09 00:30:08 - INFO - [job_automator.main:253] - Attempted: 1, Applied: 0, Failed/Error: 1, Easy Apply: 0
+2025-05-09 00:30:08 - INFO - [job_automator.main:268] - Closing database connection...
+2025-05-09 00:30:08 - INFO - [database:58] - MongoDB connection closed.
+2025-05-09 00:30:08 - INFO - [job_automator.main:270] - ====== Pipeline End: 2025-05-09T04:30:08.674509+00:00. Duration: 81.16 sec ======
+2025-05-09 00:32:18 - INFO - [root:69] - File logging enabled at level INFO. Log file: /Users/vipul/Desktop/Project/job_agent/logs/app.log
+2025-05-09 00:32:18 - INFO - [root:75] - Logging initialized for 'job_automator'. Level: INFO.
+2025-05-09 00:32:18 - INFO - [job_automator.main:30] - --- main.py execution started (Log Level: INFO) ---
+2025-05-09 00:32:18 - INFO - [job_automator.main:31] - Project Root: /Users/vipul/Desktop/Project/job_agent
+2025-05-09 00:32:18 - INFO - [job_automator.main:32] - Logging to directory: /Users/vipul/Desktop/Project/job_agent/logs
+2025-05-09 00:32:18 - INFO - [root:19] - resume_tailor/tailor.py module loading...
+2025-05-09 00:32:18 - INFO - [root:25] - Configuring Gemini API client...
+2025-05-09 00:32:18 - INFO - [root:32] - Attempting to initialize Gemini model: gemini-1.5-flash-latest...
+2025-05-09 00:32:18 - INFO - [root:49] - Gemini API configured successfully with model: gemini-1.5-flash-latest for JSON output.
+2025-05-09 00:32:18 - INFO - [root:58] - Gemini client configuration status: Success
+2025-05-09 00:32:18 - INFO - [job_automator.main:50] - Project modules imported successfully.
+2025-05-09 00:32:18 - INFO - [job_automator.main:257] - ====== Pipeline Start: 2025-05-09T04:32:18.914376+00:00 ======
+2025-05-09 00:32:18 - INFO - [job_automator.main:260] - Connecting to database...
+2025-05-09 00:32:18 - INFO - [database:25] - Attempting to establish MongoDB connection...
+2025-05-09 00:32:18 - INFO - [database:36] - Connecting to MongoDB using URI: mongodb://localhost:27017/... Database: job_agent_db
+2025-05-09 00:32:18 - INFO - [database:39] - MongoDB server ping successful.
+2025-05-09 00:32:18 - INFO - [database:42] - MongoDB connection successful. Using DB: 'job_agent_db', Collection: 'jobs'
+2025-05-09 00:32:18 - INFO - [database:75] - Database indexes ensured.
+2025-05-09 00:32:18 - INFO - [job_automator.main:260] - Database connection successful.
+2025-05-09 00:32:18 - INFO - [job_automator.main:262] - --- Phase 1: Skipping Scrapers (Default) ---
+2025-05-09 00:32:18 - INFO - [job_automator.main:263] - --- Phase 2: Processing Jobs (Tailoring & PDF Generation) ---
+2025-05-09 00:32:18 - INFO - [job_automator.main:191] - ----- Starting Job Processing Run (Tailoring & Docs) -----
+2025-05-09 00:32:18 - INFO - [job_automator.main:195] - No jobs in states (new, tailoring_failed, generation_failed) to process.
+2025-05-09 00:32:18 - INFO - [job_automator.main:264] - --- Phase 3: Processing Applications (Applying for Jobs) ---
+2025-05-09 00:32:18 - INFO - [job_automator.main:218] - ----- Starting Job Application Phase -----
+2025-05-09 00:32:18 - INFO - [job_automator.main:220] - No jobs found with status 'docs_ready' to apply.
+2025-05-09 00:32:18 - INFO - [job_automator.main:268] - Closing database connection...
+2025-05-09 00:32:18 - INFO - [database:58] - MongoDB connection closed.
+2025-05-09 00:32:18 - INFO - [job_automator.main:270] - ====== Pipeline End: 2025-05-09T04:32:18.925524+00:00. Duration: 0.01 sec ======
+2025-05-09 00:32:52 - INFO - [root:69] - File logging enabled at level INFO. Log file: /Users/vipul/Desktop/Project/job_agent/logs/app.log
+2025-05-09 00:32:52 - INFO - [root:75] - Logging initialized for 'job_automator'. Level: INFO.
+2025-05-09 00:32:52 - INFO - [job_automator.main:30] - --- main.py execution started (Log Level: INFO) ---
+2025-05-09 00:32:52 - INFO - [job_automator.main:31] - Project Root: /Users/vipul/Desktop/Project/job_agent
+2025-05-09 00:32:52 - INFO - [job_automator.main:32] - Logging to directory: /Users/vipul/Desktop/Project/job_agent/logs
+2025-05-09 00:32:52 - INFO - [root:19] - resume_tailor/tailor.py module loading...
+2025-05-09 00:32:52 - INFO - [root:25] - Configuring Gemini API client...
+2025-05-09 00:32:52 - INFO - [root:32] - Attempting to initialize Gemini model: gemini-1.5-flash-latest...
+2025-05-09 00:32:52 - INFO - [root:49] - Gemini API configured successfully with model: gemini-1.5-flash-latest for JSON output.
+2025-05-09 00:32:52 - INFO - [root:58] - Gemini client configuration status: Success
+2025-05-09 00:32:52 - INFO - [job_automator.main:50] - Project modules imported successfully.
+2025-05-09 00:32:52 - INFO - [job_automator.main:257] - ====== Pipeline Start: 2025-05-09T04:32:52.742105+00:00 ======
+2025-05-09 00:32:52 - INFO - [job_automator.main:260] - Connecting to database...
+2025-05-09 00:32:52 - INFO - [database:25] - Attempting to establish MongoDB connection...
+2025-05-09 00:32:52 - INFO - [database:36] - Connecting to MongoDB using URI: mongodb://localhost:27017/... Database: job_agent_db
+2025-05-09 00:32:52 - INFO - [database:39] - MongoDB server ping successful.
+2025-05-09 00:32:52 - INFO - [database:42] - MongoDB connection successful. Using DB: 'job_agent_db', Collection: 'jobs'
+2025-05-09 00:32:52 - INFO - [database:75] - Database indexes ensured.
+2025-05-09 00:32:52 - INFO - [job_automator.main:260] - Database connection successful.
+2025-05-09 00:32:52 - INFO - [job_automator.main:262] - --- Phase 1: Skipping Scrapers (Default) ---
+2025-05-09 00:32:52 - INFO - [job_automator.main:263] - --- Phase 2: Processing Jobs (Tailoring & PDF Generation) ---
+2025-05-09 00:32:52 - INFO - [job_automator.main:191] - ----- Starting Job Processing Run (Tailoring & Docs) -----
+2025-05-09 00:32:52 - INFO - [job_automator.main:196] - Found 1 jobs to process.
+2025-05-09 00:32:52 - INFO - [job_automator.main:200] - --- Starting processing job: https://linkedin.com/jobs/view/4223058960 ---
+2025-05-09 00:32:52 - INFO - [job_automator.main:110] - [https://linkedin.com/jobs/view/4223058960] Processing job: 'Software Engineer, Consumer Platform with verification' at 'Upstart'
+2025-05-09 00:32:52 - INFO - [utils:85] - Directory not found. Creating: /Users/vipul/Desktop/Project/job_agent/output_documents/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0
+2025-05-09 00:32:52 - INFO - [job_automator.main:121] - [https://linkedin.com/jobs/view/4223058960] Output directory set: /Users/vipul/Desktop/Project/job_agent/output_documents/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0
+2025-05-09 00:32:52 - INFO - [database:137] - DB: Updating status for https://linkedin.com/jobs/view/4223058960 to 'processing'. Reason: 'Starting tailoring.'
+2025-05-09 00:32:52 - INFO - [job_automator.main:137] - [https://linkedin.com/jobs/view/4223058960] Generating tailored LaTeX documents via tailor module...
+2025-05-09 00:32:52 - INFO - [root:386] - Starting combined tailoring for job: 'Software Engineer, Consumer Platform with verification' at 'Upstart'
+2025-05-09 00:32:52 - INFO - [root:396] - Loading base resume data and achievements...
+2025-05-09 00:32:52 - INFO - [root:257] - Loading base resume data from: /Users/vipul/Desktop/Project/job_agent/base_resume.json
+2025-05-09 00:32:52 - INFO - [root:261] - Base resume data loaded successfully.
+2025-05-09 00:32:52 - INFO - [root:427] - Constructing resume prompt for Gemini...
+2025-05-09 00:32:52 - INFO - [root:515] - Sending resume tailoring request to Gemini API...
+2025-05-09 00:32:59 - INFO - [root:528] - Successfully received and parsed tailored resume data from Gemini.
+2025-05-09 00:32:59 - INFO - [root:537] - Gemini resume response structure validated.
+2025-05-09 00:32:59 - INFO - [root:554] - Assembling final resume LaTeX string...
+2025-05-09 00:32:59 - INFO - [root:561] - Final tailored resume LaTeX string assembled.
+2025-05-09 00:32:59 - INFO - [root:570] - Proceeding to cover letter generation...
+2025-05-09 00:32:59 - INFO - [utils:178] - Loading template: /Users/vipul/Desktop/Project/job_agent/document_generator/templates/cover_letter_template.tex
+2025-05-09 00:32:59 - INFO - [root:659] - Attempting Gemini API call for cover letter body...
+2025-05-09 00:33:02 - INFO - [root:670] - Successfully generated and parsed cover letter body from Gemini.
+2025-05-09 00:33:02 - INFO - [root:717] - Cover letter LaTeX string assembled.
+2025-05-09 00:33:02 - INFO - [root:724] - Exiting generate_tailored_latex_docs function.
+2025-05-09 00:33:02 - INFO - [job_automator.main:141] - [https://linkedin.com/jobs/view/4223058960] Tailoring successful. Resume generated. CL generated.
+2025-05-09 00:33:02 - INFO - [job_automator.main:155] - [https://linkedin.com/jobs/view/4223058960] Generating PDF documents into: /Users/vipul/Desktop/Project/job_agent/output_documents/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0...
+2025-05-09 00:33:02 - INFO - [document_generator.generator:158] - Entering create_documents. Target dir: /Users/vipul/Desktop/Project/job_agent/output_documents/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0
+2025-05-09 00:33:02 - INFO - [document_generator.generator:54] - Temp .tex written: Resume.tex in Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0
+2025-05-09 00:33:02 - INFO - [document_generator.generator:69] - Running pdflatex pass 1 for Resume.tex...
+2025-05-09 00:33:03 - INFO - [document_generator.generator:69] - Running pdflatex pass 2 for Resume.tex...
+2025-05-09 00:33:03 - INFO - [document_generator.generator:90] - Successfully generated PDF: Resume.pdf
+2025-05-09 00:33:03 - INFO - [document_generator.generator:54] - Temp .tex written: CoverLetter.tex in Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0
+2025-05-09 00:33:03 - INFO - [document_generator.generator:69] - Running pdflatex pass 1 for CoverLetter.tex...
+2025-05-09 00:33:04 - INFO - [document_generator.generator:69] - Running pdflatex pass 2 for CoverLetter.tex...
+2025-05-09 00:33:04 - INFO - [document_generator.generator:90] - Successfully generated PDF: CoverLetter.pdf
+2025-05-09 00:33:04 - INFO - [document_generator.generator:102] - Attempting Job Details PDF creation: Job_Details_Report.pdf in Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0
+2025-05-09 00:33:04 - INFO - [document_generator.generator:141] - Successfully generated Job Details PDF: Job_Details_Report.pdf
+2025-05-09 00:33:04 - INFO - [document_generator.generator:184] - Exiting create_documents.
+2025-05-09 00:33:04 - INFO - [job_automator.main:173] - [https://linkedin.com/jobs/view/4223058960] PDF generation successful.
+2025-05-09 00:33:04 - INFO - [job_automator.main:202] - --- Successfully processed job (Docs Ready): https://linkedin.com/jobs/view/4223058960 ---
+2025-05-09 00:33:05 - INFO - [job_automator.main:210] - ----- Job Processing Run Finished -----
+2025-05-09 00:33:05 - INFO - [job_automator.main:211] - Attempted: 1 jobs. Docs generated for: 1.
+2025-05-09 00:33:05 - INFO - [job_automator.main:264] - --- Phase 3: Processing Applications (Applying for Jobs) ---
+2025-05-09 00:33:05 - INFO - [job_automator.main:218] - ----- Starting Job Application Phase -----
+2025-05-09 00:33:05 - INFO - [job_automator.main:221] - Found 1 jobs ready for application attempt.
+2025-05-09 00:33:05 - INFO - [job_automator.main:239] - --- Attempting application for job: https://linkedin.com/jobs/view/4223058960 ---
+2025-05-09 00:33:05 - INFO - [job_automator.automator_main:108] - [https://linkedin.com/jobs/view/4223058960] Attempting ATS application for URL: https://boards.greenhouse.io/embed/job_app?token=6856146&gh_src=8c01b2f01
+2025-05-09 00:33:05 - INFO - [database:137] - DB: Updating status for https://linkedin.com/jobs/view/4223058960 to 'application_in_progress'. Reason: 'Identifying ATS platform.'
+2025-05-09 00:33:05 - INFO - [job_automator.ats_identifier:40] - ATS identified as 'greenhouse' for URL: https://boards.greenhouse.io/embed/job_app?token=6856146&gh_src=8c01b2f01
+2025-05-09 00:33:05 - INFO - [database:137] - DB: Updating status for https://linkedin.com/jobs/view/4223058960 to 'application_in_progress'. Reason: 'Initializing greenhouse filler.'
+2025-05-09 00:33:05 - INFO - [job_automator.browser_utils:28] - Initializing WebDriver: Type=chrome, Headless=False
+2025-05-09 00:33:05 - INFO - [WDM:11] - ====== WebDriver manager ======
+2025-05-09 00:33:06 - INFO - [WDM:11] - Get LATEST chromedriver version for google-chrome
+2025-05-09 00:33:07 - INFO - [WDM:11] - Get LATEST chromedriver version for google-chrome
+2025-05-09 00:33:07 - INFO - [WDM:11] - Driver [/Users/vipul/.wdm/drivers/chromedriver/mac64/136.0.7103.92/chromedriver-mac-arm64/chromedriver] found in cache
+2025-05-09 00:33:08 - INFO - [job_automator.browser_utils:55] - Chrome WebDriver initialized successfully via webdriver-manager.
+2025-05-09 00:33:08 - INFO - [job_automator.browser_utils:79] - Chrome WebDriver Ready.
+2025-05-09 00:33:08 - INFO - [job_automator.automator_main:156] - [https://linkedin.com/jobs/view/4223058960] Instantiating and running GreenhouseFiller...
+2025-05-09 00:33:08 - INFO - [job_automator.intelligence.llm_clients:34] - Initializing LLM client (Gemini)...
+2025-05-09 00:33:08 - INFO - [job_automator.intelligence.llm_clients:50] - ChatGoogleGenerativeAI initialized successfully with model: gemini-1.5-flash-latest
+2025-05-09 00:33:08 - INFO - [GreenhouseFiller:879] - [GreenhouseFiller - JobID: unknown_id] Navigating to application start URL: https://boards.greenhouse.io/embed/job_app?token=6856146&gh_src=8c01b2f01
+2025-05-09 00:33:11 - INFO - [GreenhouseFiller:486] - [GreenhouseFiller - JobID: unknown_id] Navigated to https://boards.greenhouse.io/embed/job_app?token=6856146&gh_src=8c01b2f01.
+2025-05-09 00:33:11 - INFO - [GreenhouseFiller:242] - [GreenhouseFiller - JobID: unknown_id] Sending chunk 1/1 to AI for 'basic_info_unknown_id'. Size: 23416 chars.
+2025-05-09 00:33:19 - INFO - [GreenhouseFiller:267] - [GreenhouseFiller - JobID: unknown_id] Successfully processed AI response for chunk 1/1.
+2025-05-09 00:33:19 - INFO - [GreenhouseFiller:308] - [GreenhouseFiller - JobID: unknown_id] Completed AI analysis for 'basic_info_unknown_id'.
+2025-05-09 00:33:19 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'First Name' (Type: text)
+2025-05-09 00:33:19 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Last Name' (Type: text)
+2025-05-09 00:33:20 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Email' (Type: text)
+2025-05-09 00:33:20 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Phone' (Type: text)
+2025-05-09 00:33:20 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'LinkedIn Profile' (Type: text)
+2025-05-09 00:33:21 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Website' (Type: text)
+2025-05-09 00:33:21 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Location (City)' (Type: text)
+2025-05-09 00:33:21 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Location Preference' (Type: checkbox)
+2025-05-09 00:33:21 - INFO - [GreenhouseFiller:626] - [GreenhouseFiller - JobID: unknown_id] Attempting to click checkbox for 'Location Preference' using locator ['name', 'job_application[answers_attributes][2][answer_selected_options_attributes][3][question_option_id]']
+2025-05-09 00:33:22 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Resume/CV' (Type: file)
+2025-05-09 00:33:22 - WARNING - [GreenhouseFiller:643] - [GreenhouseFiller - JobID: unknown_id] No 'document_type' specified for file field: Resume/CV
+2025-05-09 00:33:22 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Resume/CV' (Type: file). Required: True
+2025-05-09 00:33:22 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Have you been employed by Upstart before?' (Type: select)
+2025-05-09 00:33:25 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '0' not found in Have you been employed by Upstart before?. (non-fatal)
+2025-05-09 00:33:25 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Have you been employed by Upstart before?' (Type: select). Required: True
+2025-05-09 00:33:25 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Are you authorized to work lawfully in the United States for Upstart?' (Type: select)
+2025-05-09 00:33:28 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '1' not found in Are you authorized to work lawfully in the United States for Upstart?. (non-fatal)
+2025-05-09 00:33:28 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Are you authorized to work lawfully in the United States for Upstart?' (Type: select). Required: True
+2025-05-09 00:33:28 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Will you now or in the future require sponsorship for employment visa status?' (Type: select)
+2025-05-09 00:33:31 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '0' not found in Will you now or in the future require sponsorship for employment visa status?. (non-fatal)
+2025-05-09 00:33:31 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Will you now or in the future require sponsorship for employment visa status?' (Type: select). Required: False
+2025-05-09 00:33:31 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Gender' (Type: select)
+2025-05-09 00:33:31 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Are you Hispanic/Latino?' (Type: select)
+2025-05-09 00:33:31 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Veteran Status' (Type: select)
+2025-05-09 00:33:34 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '3' not found in Veteran Status. (non-fatal)
+2025-05-09 00:33:34 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Veteran Status' (Type: select). Required: True
+2025-05-09 00:33:34 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Disability Status' (Type: select)
+2025-05-09 00:33:37 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '3' not found in Disability Status. (non-fatal)
+2025-05-09 00:33:37 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Disability Status' (Type: select). Required: True
+2025-05-09 00:33:37 - ERROR - [GreenhouseFiller:1085] - Caught ApplicationError: Basic info step failed. Initiating manual intervention.
+2025-05-09 00:33:37 - INFO - [GreenhouseFiller:1000] - ‼️ APPLICATION ERROR: Basic info step failed (Status: application_failed_ats_step)
+2025-05-09 00:33:37 - INFO - [GreenhouseFiller:1001] - ⏸️ PAUSING FOR MANUAL INTERVENTION. The browser window remains open.
+2025-05-09 00:33:37 - INFO - [GreenhouseFiller:1002] - Please attempt to complete/fix the application manually in the browser.
+2025-05-09 00:33:37 - INFO - [GreenhouseFiller:1003] - Once done, or if you close the window, please respond in THIS console window.
+2025-05-14 15:40:37 - INFO - [root:69] - File logging enabled at level INFO. Log file: /Users/vipul/Desktop/Project/job_agent/logs/app.log
+2025-05-14 15:40:37 - INFO - [root:75] - Logging initialized for 'job_automator'. Level: INFO.
+2025-05-14 15:40:37 - INFO - [job_automator.main:30] - --- main.py execution started (Log Level: INFO) ---
+2025-05-14 15:40:37 - INFO - [job_automator.main:31] - Project Root: /Users/vipul/Desktop/Project/job_agent
+2025-05-14 15:40:37 - INFO - [job_automator.main:32] - Logging to directory: /Users/vipul/Desktop/Project/job_agent/logs
+2025-05-14 15:40:37 - CRITICAL - [job_automator.main:52] - Failed to import modules after logging setup: No module named 'pymongo'.
+Traceback (most recent call last):
+  File "/Users/vipul/Desktop/Project/job_agent/main.py", line 43, in <module>
+    import database
+  File "/Users/vipul/Desktop/Project/job_agent/database.py", line 2, in <module>
+    import pymongo
+ModuleNotFoundError: No module named 'pymongo'
+2025-05-14 15:41:14 - INFO - [root:69] - File logging enabled at level INFO. Log file: /Users/vipul/Desktop/Project/job_agent/logs/app.log
+2025-05-14 15:41:14 - INFO - [root:75] - Logging initialized for 'job_automator'. Level: INFO.
+2025-05-14 15:41:14 - INFO - [job_automator.main:30] - --- main.py execution started (Log Level: INFO) ---
+2025-05-14 15:41:14 - INFO - [job_automator.main:31] - Project Root: /Users/vipul/Desktop/Project/job_agent
+2025-05-14 15:41:14 - INFO - [job_automator.main:32] - Logging to directory: /Users/vipul/Desktop/Project/job_agent/logs
+2025-05-14 15:41:15 - INFO - [root:19] - resume_tailor/tailor.py module loading...
+2025-05-14 15:41:15 - INFO - [root:25] - Configuring Gemini API client...
+2025-05-14 15:41:15 - INFO - [root:32] - Attempting to initialize Gemini model: gemini-1.5-flash-latest...
+2025-05-14 15:41:15 - INFO - [root:49] - Gemini API configured successfully with model: gemini-1.5-flash-latest for JSON output.
+2025-05-14 15:41:15 - INFO - [root:58] - Gemini client configuration status: Success
+2025-05-14 15:41:15 - INFO - [job_automator.main:50] - Project modules imported successfully.
+2025-05-14 15:41:15 - INFO - [job_automator.main:257] - ====== Pipeline Start: 2025-05-14T19:41:15.983050+00:00 ======
+2025-05-14 15:41:15 - INFO - [job_automator.main:260] - Connecting to database...
+2025-05-14 15:41:15 - INFO - [database:25] - Attempting to establish MongoDB connection...
+2025-05-14 15:41:15 - INFO - [database:36] - Connecting to MongoDB using URI: mongodb://localhost:27017/... Database: job_agent_db
+2025-05-14 15:41:15 - INFO - [database:39] - MongoDB server ping successful.
+2025-05-14 15:41:15 - INFO - [database:42] - MongoDB connection successful. Using DB: 'job_agent_db', Collection: 'jobs'
+2025-05-14 15:41:15 - INFO - [database:75] - Database indexes ensured.
+2025-05-14 15:41:15 - INFO - [job_automator.main:260] - Database connection successful.
+2025-05-14 15:41:15 - INFO - [job_automator.main:262] - --- Phase 1: Skipping Scrapers (Default) ---
+2025-05-14 15:41:15 - INFO - [job_automator.main:263] - --- Phase 2: Processing Jobs (Tailoring & PDF Generation) ---
+2025-05-14 15:41:15 - INFO - [job_automator.main:191] - ----- Starting Job Processing Run (Tailoring & Docs) -----
+2025-05-14 15:41:15 - INFO - [job_automator.main:196] - Found 1 jobs to process.
+2025-05-14 15:41:15 - INFO - [job_automator.main:200] - --- Starting processing job: https://linkedin.com/jobs/view/4223058960 ---
+2025-05-14 15:41:15 - INFO - [job_automator.main:110] - [https://linkedin.com/jobs/view/4223058960] Processing job: 'Software Engineer, Consumer Platform with verification' at 'Upstart'
+2025-05-14 15:41:15 - INFO - [job_automator.main:121] - [https://linkedin.com/jobs/view/4223058960] Output directory set: /Users/vipul/Desktop/Project/job_agent/output_documents/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0
+2025-05-14 15:41:16 - INFO - [database:137] - DB: Updating status for https://linkedin.com/jobs/view/4223058960 to 'processing'. Reason: 'Starting tailoring.'
+2025-05-14 15:41:16 - INFO - [job_automator.main:137] - [https://linkedin.com/jobs/view/4223058960] Generating tailored LaTeX documents via tailor module...
+2025-05-14 15:41:16 - INFO - [root:386] - Starting combined tailoring for job: 'Software Engineer, Consumer Platform with verification' at 'Upstart'
+2025-05-14 15:41:16 - INFO - [root:396] - Loading base resume data and achievements...
+2025-05-14 15:41:16 - INFO - [root:257] - Loading base resume data from: /Users/vipul/Desktop/Project/job_agent/base_resume.json
+2025-05-14 15:41:16 - INFO - [root:261] - Base resume data loaded successfully.
+2025-05-14 15:41:16 - INFO - [root:427] - Constructing resume prompt for Gemini...
+2025-05-14 15:41:16 - INFO - [root:515] - Sending resume tailoring request to Gemini API...
+2025-05-14 15:41:18 - INFO - [job_automator.main:268] - Closing database connection...
+2025-05-14 15:41:18 - INFO - [database:58] - MongoDB connection closed.
+2025-05-14 15:41:27 - INFO - [root:69] - File logging enabled at level INFO. Log file: /Users/vipul/Desktop/Project/job_agent/logs/app.log
+2025-05-14 15:41:27 - INFO - [root:75] - Logging initialized for 'job_automator'. Level: INFO.
+2025-05-14 15:41:27 - INFO - [job_automator.main:30] - --- main.py execution started (Log Level: INFO) ---
+2025-05-14 15:41:27 - INFO - [job_automator.main:31] - Project Root: /Users/vipul/Desktop/Project/job_agent
+2025-05-14 15:41:27 - INFO - [job_automator.main:32] - Logging to directory: /Users/vipul/Desktop/Project/job_agent/logs
+2025-05-14 15:41:27 - CRITICAL - [job_automator.main:52] - Failed to import modules after logging setup: No module named 'pymongo'.
+Traceback (most recent call last):
+  File "/Users/vipul/Desktop/Project/job_agent/main.py", line 43, in <module>
+    import database
+  File "/Users/vipul/Desktop/Project/job_agent/database.py", line 2, in <module>
+    import pymongo
+ModuleNotFoundError: No module named 'pymongo'
+2025-05-14 15:48:12 - INFO - [root:69] - File logging enabled at level INFO. Log file: /Users/vipul/Desktop/Project/job_agent/logs/app.log
+2025-05-14 15:48:12 - INFO - [root:75] - Logging initialized for 'job_automator'. Level: INFO.
+2025-05-14 15:48:12 - INFO - [job_automator.main:30] - --- main.py execution started (Log Level: INFO) ---
+2025-05-14 15:48:12 - INFO - [job_automator.main:31] - Project Root: /Users/vipul/Desktop/Project/job_agent
+2025-05-14 15:48:12 - INFO - [job_automator.main:32] - Logging to directory: /Users/vipul/Desktop/Project/job_agent/logs
+2025-05-14 15:48:15 - INFO - [root:19] - resume_tailor/tailor.py module loading...
+2025-05-14 15:48:15 - INFO - [root:25] - Configuring Gemini API client...
+2025-05-14 15:48:15 - INFO - [root:32] - Attempting to initialize Gemini model: gemini-1.5-flash-latest...
+2025-05-14 15:48:15 - INFO - [root:49] - Gemini API configured successfully with model: gemini-1.5-flash-latest for JSON output.
+2025-05-14 15:48:15 - INFO - [root:58] - Gemini client configuration status: Success
+2025-05-14 15:48:53 - INFO - [root:69] - File logging enabled at level INFO. Log file: /Users/vipul/Desktop/Project/job_agent/logs/app.log
+2025-05-14 15:48:53 - INFO - [root:75] - Logging initialized for 'job_automator'. Level: INFO.
+2025-05-14 15:48:53 - INFO - [job_automator.main:30] - --- main.py execution started (Log Level: INFO) ---
+2025-05-14 15:48:53 - INFO - [job_automator.main:31] - Project Root: /Users/vipul/Desktop/Project/job_agent
+2025-05-14 15:48:53 - INFO - [job_automator.main:32] - Logging to directory: /Users/vipul/Desktop/Project/job_agent/logs
+2025-05-14 15:48:53 - INFO - [root:19] - resume_tailor/tailor.py module loading...
+2025-05-14 15:48:53 - INFO - [root:25] - Configuring Gemini API client...
+2025-05-14 15:48:53 - INFO - [root:32] - Attempting to initialize Gemini model: gemini-1.5-flash-latest...
+2025-05-14 15:48:53 - INFO - [root:49] - Gemini API configured successfully with model: gemini-1.5-flash-latest for JSON output.
+2025-05-14 15:48:53 - INFO - [root:58] - Gemini client configuration status: Success
+2025-05-14 15:48:54 - INFO - [job_automator.main:50] - Project modules imported successfully.
+2025-05-14 15:48:54 - INFO - [job_automator.main:257] - ====== Pipeline Start: 2025-05-14T19:48:54.138069+00:00 ======
+2025-05-14 15:48:54 - INFO - [job_automator.main:260] - Connecting to database...
+2025-05-14 15:48:54 - INFO - [database:25] - Attempting to establish MongoDB connection...
+2025-05-14 15:48:54 - INFO - [database:36] - Connecting to MongoDB using URI: mongodb://localhost:27017/... Database: job_agent_db
+2025-05-14 15:48:54 - INFO - [database:39] - MongoDB server ping successful.
+2025-05-14 15:48:54 - INFO - [database:42] - MongoDB connection successful. Using DB: 'job_agent_db', Collection: 'jobs'
+2025-05-14 15:48:54 - INFO - [database:75] - Database indexes ensured.
+2025-05-14 15:48:54 - INFO - [job_automator.main:260] - Database connection successful.
+2025-05-14 15:48:54 - INFO - [job_automator.main:262] - --- Phase 1: Skipping Scrapers (Default) ---
+2025-05-14 15:48:54 - INFO - [job_automator.main:263] - --- Phase 2: Processing Jobs (Tailoring & PDF Generation) ---
+2025-05-14 15:48:54 - INFO - [job_automator.main:191] - ----- Starting Job Processing Run (Tailoring & Docs) -----
+2025-05-14 15:48:54 - INFO - [job_automator.main:195] - No jobs in states (new, tailoring_failed, generation_failed) to process.
+2025-05-14 15:48:54 - INFO - [job_automator.main:264] - --- Phase 3: Processing Applications (Applying for Jobs) ---
+2025-05-14 15:48:54 - INFO - [job_automator.main:218] - ----- Starting Job Application Phase -----
+2025-05-14 15:48:54 - INFO - [job_automator.main:220] - No jobs found with status 'docs_ready' to apply.
+2025-05-14 15:48:54 - INFO - [job_automator.main:268] - Closing database connection...
+2025-05-14 15:48:54 - INFO - [database:58] - MongoDB connection closed.
+2025-05-14 15:48:54 - INFO - [job_automator.main:270] - ====== Pipeline End: 2025-05-14T19:48:54.151850+00:00. Duration: 0.01 sec ======
+2025-05-14 15:51:39 - INFO - [root:69] - File logging enabled at level INFO. Log file: /Users/vipul/Desktop/Project/job_agent/logs/app.log
+2025-05-14 15:51:39 - INFO - [root:75] - Logging initialized for 'job_automator'. Level: INFO.
+2025-05-14 15:51:39 - INFO - [job_automator.main:30] - --- main.py execution started (Log Level: INFO) ---
+2025-05-14 15:51:39 - INFO - [job_automator.main:31] - Project Root: /Users/vipul/Desktop/Project/job_agent
+2025-05-14 15:51:39 - INFO - [job_automator.main:32] - Logging to directory: /Users/vipul/Desktop/Project/job_agent/logs
+2025-05-14 15:51:39 - INFO - [root:19] - resume_tailor/tailor.py module loading...
+2025-05-14 15:51:39 - INFO - [root:25] - Configuring Gemini API client...
+2025-05-14 15:51:39 - INFO - [root:32] - Attempting to initialize Gemini model: gemini-1.5-flash-latest...
+2025-05-14 15:51:39 - INFO - [root:49] - Gemini API configured successfully with model: gemini-1.5-flash-latest for JSON output.
+2025-05-14 15:51:39 - INFO - [root:58] - Gemini client configuration status: Success
+2025-05-14 15:51:39 - INFO - [job_automator.main:50] - Project modules imported successfully.
+2025-05-14 15:51:39 - INFO - [job_automator.main:257] - ====== Pipeline Start: 2025-05-14T19:51:39.956095+00:00 ======
+2025-05-14 15:51:39 - INFO - [job_automator.main:260] - Connecting to database...
+2025-05-14 15:51:39 - INFO - [database:25] - Attempting to establish MongoDB connection...
+2025-05-14 15:51:39 - INFO - [database:36] - Connecting to MongoDB using URI: mongodb://localhost:27017/... Database: job_agent_db
+2025-05-14 15:51:39 - INFO - [database:39] - MongoDB server ping successful.
+2025-05-14 15:51:39 - INFO - [database:42] - MongoDB connection successful. Using DB: 'job_agent_db', Collection: 'jobs'
+2025-05-14 15:51:39 - INFO - [database:75] - Database indexes ensured.
+2025-05-14 15:51:39 - INFO - [job_automator.main:260] - Database connection successful.
+2025-05-14 15:51:39 - INFO - [job_automator.main:262] - --- Phase 1: Skipping Scrapers (Default) ---
+2025-05-14 15:51:39 - INFO - [job_automator.main:263] - --- Phase 2: Processing Jobs (Tailoring & PDF Generation) ---
+2025-05-14 15:51:39 - INFO - [job_automator.main:191] - ----- Starting Job Processing Run (Tailoring & Docs) -----
+2025-05-14 15:51:39 - INFO - [job_automator.main:195] - No jobs in states (new, tailoring_failed, generation_failed) to process.
+2025-05-14 15:51:39 - INFO - [job_automator.main:264] - --- Phase 3: Processing Applications (Applying for Jobs) ---
+2025-05-14 15:51:39 - INFO - [job_automator.main:218] - ----- Starting Job Application Phase -----
+2025-05-14 15:51:39 - INFO - [job_automator.main:221] - Found 1 jobs ready for application attempt.
+2025-05-14 15:51:39 - INFO - [job_automator.main:239] - --- Attempting application for job: https://linkedin.com/jobs/view/4223058960 ---
+2025-05-14 15:51:39 - INFO - [job_automator.automator_main:108] - [https://linkedin.com/jobs/view/4223058960] Attempting ATS application for URL: https://boards.greenhouse.io/embed/job_app?token=6856146&gh_src=8c01b2f01
+2025-05-14 15:51:39 - INFO - [database:137] - DB: Updating status for https://linkedin.com/jobs/view/4223058960 to 'application_in_progress'. Reason: 'Identifying ATS platform.'
+2025-05-14 15:51:39 - INFO - [job_automator.ats_identifier:40] - ATS identified as 'greenhouse' for URL: https://boards.greenhouse.io/embed/job_app?token=6856146&gh_src=8c01b2f01
+2025-05-14 15:51:39 - INFO - [database:137] - DB: Updating status for https://linkedin.com/jobs/view/4223058960 to 'application_in_progress'. Reason: 'Initializing greenhouse filler.'
+2025-05-14 15:51:39 - INFO - [job_automator.browser_utils:28] - Initializing WebDriver: Type=chrome, Headless=False
+2025-05-14 15:51:39 - INFO - [WDM:11] - ====== WebDriver manager ======
+2025-05-14 15:51:40 - INFO - [WDM:11] - Get LATEST chromedriver version for google-chrome
+2025-05-14 15:51:40 - INFO - [WDM:11] - Get LATEST chromedriver version for google-chrome
+2025-05-14 15:51:40 - INFO - [WDM:11] - There is no [mac64] chromedriver "136.0.7103.94" for browser google-chrome "136.0.7103" in cache
+2025-05-14 15:51:40 - INFO - [WDM:11] - Get LATEST chromedriver version for google-chrome
+2025-05-14 15:51:40 - INFO - [WDM:11] - WebDriver version 136.0.7103.94 selected
+2025-05-14 15:51:40 - INFO - [WDM:11] - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/mac-arm64/chromedriver-mac-arm64.zip
+2025-05-14 15:51:40 - INFO - [WDM:11] - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/mac-arm64/chromedriver-mac-arm64.zip
+2025-05-14 15:51:41 - INFO - [WDM:11] - Driver downloading response is 200
+2025-05-14 15:51:41 - INFO - [WDM:11] - Get LATEST chromedriver version for google-chrome
+2025-05-14 15:51:41 - INFO - [WDM:11] - Driver has been saved in cache [/Users/vipul/.wdm/drivers/chromedriver/mac64/136.0.7103.94]
+2025-05-14 15:51:43 - INFO - [job_automator.browser_utils:55] - Chrome WebDriver initialized successfully via webdriver-manager.
+2025-05-14 15:51:43 - INFO - [job_automator.browser_utils:79] - Chrome WebDriver Ready.
+2025-05-14 15:51:43 - INFO - [job_automator.automator_main:156] - [https://linkedin.com/jobs/view/4223058960] Instantiating and running GreenhouseFiller...
+2025-05-14 15:51:43 - INFO - [job_automator.intelligence.llm_clients:34] - Initializing LLM client (Gemini)...
+2025-05-14 15:51:43 - INFO - [job_automator.intelligence.llm_clients:50] - ChatGoogleGenerativeAI initialized successfully with model: gemini-1.5-flash-latest
+2025-05-14 15:51:43 - INFO - [GreenhouseFiller:879] - [GreenhouseFiller - JobID: unknown_id] Navigating to application start URL: https://boards.greenhouse.io/embed/job_app?token=6856146&gh_src=8c01b2f01
+2025-05-14 15:51:45 - INFO - [GreenhouseFiller:486] - [GreenhouseFiller - JobID: unknown_id] Navigated to https://boards.greenhouse.io/embed/job_app?token=6856146&gh_src=8c01b2f01.
+2025-05-14 15:51:45 - INFO - [GreenhouseFiller:242] - [GreenhouseFiller - JobID: unknown_id] Sending chunk 1/1 to AI for 'basic_info_unknown_id'. Size: 23416 chars.
+2025-05-14 15:51:54 - INFO - [GreenhouseFiller:267] - [GreenhouseFiller - JobID: unknown_id] Successfully processed AI response for chunk 1/1.
+2025-05-14 15:51:54 - INFO - [GreenhouseFiller:308] - [GreenhouseFiller - JobID: unknown_id] Completed AI analysis for 'basic_info_unknown_id'.
+2025-05-14 15:51:54 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'First Name' (Type: text)
+2025-05-14 15:51:55 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Last Name' (Type: text)
+2025-05-14 15:51:55 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Email' (Type: text)
+2025-05-14 15:51:55 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Phone' (Type: text)
+2025-05-14 15:51:56 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'LinkedIn Profile' (Type: text)
+2025-05-14 15:51:56 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Website' (Type: text)
+2025-05-14 15:51:57 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Location (City)' (Type: text)
+2025-05-14 15:51:57 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Location Preference' (Type: checkbox)
+2025-05-14 15:51:57 - INFO - [GreenhouseFiller:626] - [GreenhouseFiller - JobID: unknown_id] Attempting to click checkbox for 'Location Preference' using locator ['id', 'job_application_answers_attributes_2_answer_selected_options_attributes_3_question_option_id']
+2025-05-14 15:51:57 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Have you been employed by Upstart before?' (Type: select)
+2025-05-14 15:52:00 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '0' not found in Have you been employed by Upstart before?. (non-fatal)
+2025-05-14 15:52:00 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Have you been employed by Upstart before?' (Type: select). Required: True
+2025-05-14 15:52:00 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Are you authorized to work lawfully in the United States for Upstart?' (Type: select)
+2025-05-14 15:52:03 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '1' not found in Are you authorized to work lawfully in the United States for Upstart?. (non-fatal)
+2025-05-14 15:52:03 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Are you authorized to work lawfully in the United States for Upstart?' (Type: select). Required: True
+2025-05-14 15:52:03 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Will you now or in the future require sponsorship for employment visa status?' (Type: select)
+2025-05-14 15:52:07 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '0' not found in Will you now or in the future require sponsorship for employment visa status?. (non-fatal)
+2025-05-14 15:52:07 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Will you now or in the future require sponsorship for employment visa status?' (Type: select). Required: False
+2025-05-14 15:52:07 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Gender' (Type: select)
+2025-05-14 15:52:07 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Are you Hispanic/Latino?' (Type: select)
+2025-05-14 15:52:07 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Please identify your race' (Type: select)
+2025-05-14 15:52:07 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Veteran Status' (Type: select)
+2025-05-14 15:52:10 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '3' not found in Veteran Status. (non-fatal)
+2025-05-14 15:52:10 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Veteran Status' (Type: select). Required: True
+2025-05-14 15:52:10 - INFO - [GreenhouseFiller:318] - [GreenhouseFiller - JobID: unknown_id] Processing field 'Disability Status' (Type: select)
+2025-05-14 15:52:13 - WARNING - [GreenhouseFiller:442] - [GreenhouseFiller - JobID: unknown_id] Option '3' not found in Disability Status. (non-fatal)
+2025-05-14 15:52:13 - WARNING - [GreenhouseFiller:320] - [GreenhouseFiller - JobID: unknown_id] Failed to fill field: 'Disability Status' (Type: select). Required: True
+2025-05-14 15:52:13 - ERROR - [GreenhouseFiller:1085] - Caught ApplicationError: Basic info step failed. Initiating manual intervention.
+2025-05-14 15:52:13 - INFO - [GreenhouseFiller:1000] - ‼️ APPLICATION ERROR: Basic info step failed (Status: application_failed_ats_step)
+2025-05-14 15:52:13 - INFO - [GreenhouseFiller:1001] - ⏸️ PAUSING FOR MANUAL INTERVENTION. The browser window remains open.
+2025-05-14 15:52:13 - INFO - [GreenhouseFiller:1002] - Please attempt to complete/fix the application manually in the browser.
+2025-05-14 15:52:13 - INFO - [GreenhouseFiller:1003] - Once done, or if you close the window, please respond in THIS console window.
+2025-05-14 15:52:26 - INFO - [GreenhouseFiller:1022] - User indicated: Application was manually submitted.
+2025-05-14 15:52:26 - INFO - [job_automator.browser_utils:94] - Closing WebDriver instance.
+2025-05-14 15:52:26 - INFO - [job_automator.automator_main:207] - [https://linkedin.com/jobs/view/4223058960] Application outcome is success-like. Target folder: /Users/vipul/Desktop/Project/job_agent/processed_applications/success
+2025-05-14 15:52:26 - WARNING - [job_automator.automator_main:55] - [Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0] Destination path '/Users/vipul/Desktop/Project/job_agent/processed_applications/success/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0' already exists. Removing existing before move.
+2025-05-14 15:52:26 - INFO - [job_automator.automator_main:58] - [Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0] Moving processed folder from '/Users/vipul/Desktop/Project/job_agent/output_documents/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0' to '/Users/vipul/Desktop/Project/job_agent/processed_applications/success/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0'
+2025-05-14 15:52:26 - INFO - [job_automator.automator_main:60] - [Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0] Folder moved successfully.
+2025-05-14 15:52:26 - INFO - [job_automator.automator_main:248] - [https://linkedin.com/jobs/view/4223058960] Final application status: manual_intervention_submitted_by_user. Folder location: /Users/vipul/Desktop/Project/job_agent/processed_applications/success/Upstart_Software_Engineer_Consumer_Platform_with_verificat_681be089c99e3b44d697f2a0. Reason: Application reported as manually submitted by user for greenhouse.
+2025-05-14 15:52:26 - INFO - [job_automator.main:242] - --- Application attempt result for https://linkedin.com/jobs/view/4223058960: manual_intervention_submitted_by_user ---
+2025-05-14 15:52:26 - WARNING - [job_automator.main:246] - [https://linkedin.com/jobs/view/4223058960] Unexpected result status from automator: manual_intervention_submitted_by_user
+2025-05-14 15:52:36 - INFO - [job_automator.main:252] - ----- Job Application Phase Finished -----
+2025-05-14 15:52:36 - INFO - [job_automator.main:253] - Attempted: 1, Applied: 0, Failed/Error: 1, Easy Apply: 0
+2025-05-14 15:52:36 - INFO - [job_automator.main:268] - Closing database connection...
+2025-05-14 15:52:36 - INFO - [database:58] - MongoDB connection closed.
+2025-05-14 15:52:36 - INFO - [job_automator.main:270] - ====== Pipeline End: 2025-05-14T19:52:36.780474+00:00. Duration: 56.82 sec ======
