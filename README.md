@@ -1,6 +1,26 @@
 # 🤖 Automated Job Application Assistant
 
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Stars](https://img.shields.io/github/stars/bchikara/job_automater?style=social)](https://github.com/bchikara/job_automater/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/bchikara/job_automater)](https://github.com/bchikara/job_automater/issues)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bchikara/job_automater/pulls)
+
+> 🤖 **Intelligent job application automation powered by AI.** Scrapes jobs from LinkedIn/JobRight, tailors resumes/cover letters with AI (Gemini), generates PDFs, and auto-fills ATS forms (Greenhouse, Workday). Built with Python + Selenium + MongoDB.
+
 ![Job Agent Preview](preview/job_agent.png)
+
+## 📑 Table of Contents
+
+- [Project Goal](#-project-goal)
+- [Quick Start](#-quick-start-10-minutes)
+- [Core Features](#-core-features)
+- [Technologies Used](#️-technologies-used)
+- [CLI Commands](#-cli-commands)
+- [Use Cases](#-use-cases)
+- [Future Enhancements](#-future-enhancements)
+- [Contributing](#-contact--support)
+- [License](#-license)
 
 ## 🎯 Project Goal
 
@@ -14,8 +34,8 @@ Think of it as a smart assistant that helps you apply for jobs more efficiently!
 
 ```bash
 # 1. Clone and navigate
-git clone <repository-url>
-cd job_agent
+git clone https://github.com/bchikara/job_automater.git
+cd job_automater
 
 # 2. Create virtual environment
 python3 -m venv .venv
@@ -36,7 +56,7 @@ python cli.py setup
 python cli.py interactive
 ```
 
-**Need help?** See [QUICKSTART.md](QUICKSTART.md) or [SETUP_GUIDE.md](SETUP_GUIDE.md) for detailed setup instructions.
+**Need help?** See [QUICKSTART.md](docs/QUICKSTART.md) or [SETUP_GUIDE.md](docs/SETUP_GUIDE.md) for detailed setup instructions.
 
 ## ✨ Core Features
 
@@ -111,7 +131,7 @@ python cli.py status
 python cli.py config-info
 ```
 
-See [CLI_USAGE.md](CLI_USAGE.md) for complete documentation.
+See the CLI help for complete documentation: `python cli.py --help`
 
 ## ✅ Use Cases
 
@@ -140,8 +160,8 @@ See [CLI_USAGE.md](CLI_USAGE.md) for complete documentation.
 **Phone:** +1 315-575-7385
 
 ### Get Help
-- 📖 **Documentation:** Check [SETUP_GUIDE.md](SETUP_GUIDE.md) and [QUICKSTART.md](QUICKSTART.md)
-- 🐛 **Issues:** Report bugs at [GitHub Issues](https://github.com/yourusername/job_agent/issues)
+- 📖 **Documentation:** Check [SETUP_GUIDE.md](docs/SETUP_GUIDE.md) and [QUICKSTART.md](docs/QUICKSTART.md)
+- 🐛 **Issues:** Report bugs at [GitHub Issues](https://github.com/bchikara/job_automater/issues)
 - 💡 **Feature Requests:** Submit ideas via GitHub Issues
 - 🤝 **Contributing:** See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines
 
