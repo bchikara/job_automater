@@ -1,0 +1,119 @@
+{
+  "experience": [
+    {
+      "company": "Tech Company Inc.",
+      "title": "Senior Software Engineer",
+      "dates": "Jan 2022 -- Present",
+      "technologies": "Python, React, AWS, Docker, PostgreSQL",
+      "location": "San Francisco, CA",
+      "description": [
+        "Led development of microservices architecture serving 500K+ daily active users with 99.9% uptime",
+        "Reduced API response time by 40% through database optimization and caching strategies",
+        "Mentored team of 5 junior developers and conducted code reviews for 50+ pull requests monthly",
+        "Implemented CI/CD pipeline reducing deployment time from 2 hours to 15 minutes"
+      ]
+    },
+    {
+      "company": "StartupXYZ",
+      "title": "Software Engineer",
+      "dates": "Jun 2020 -- Dec 2021",
+      "technologies": "JavaScript, Node.js, MongoDB, React, Express",
+      "location": "Remote",
+      "description": [
+        "Built RESTful APIs processing 1M+ requests daily with sub-100ms average response time",
+        "Developed real-time notification system using WebSockets serving 100K concurrent users",
+        "Collaborated with product team to design and implement 15+ customer-facing features",
+        "Improved code coverage from 40% to 85% by implementing comprehensive test suite"
+      ]
+    },
+    {
+      "company": "Previous Company LLC",
+      "title": "Junior Software Developer",
+      "dates": "Jan 2019 -- May 2020",
+      "technologies": "Python, Django, JavaScript, PostgreSQL, Redis",
+      "location": "New York, NY",
+      "description": [
+        "Developed and maintained Django-based web application used by 50K+ users",
+        "Optimized database queries reducing page load time by 60%",
+        "Integrated third-party APIs including Stripe for payment processing and SendGrid for emails",
+        "Participated in agile sprints and contributed to sprint planning and retrospectives"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "AI-Powered Job Application Assistant",
+      "technologies": "Python, Google Gemini, Selenium, MongoDB, LaTeX",
+      "dates": "Nov 2024 -- Present",
+      "description": [
+        "Built automated job application system using AI to tailor resumes and cover letters for each position",
+        "Implemented web scraping to collect job postings from LinkedIn and JobRight platforms",
+        "Created intelligent form-filling automation for major ATS platforms (Greenhouse, Workday)",
+        "Achieved 95%+ ATS compatibility score through LaTeX-based document generation"
+      ]
+    },
+    {
+      "title": "E-Commerce Platform",
+      "technologies": "React, Node.js, Express, MongoDB, Stripe",
+      "dates": "Mar 2024 -- Aug 2024",
+      "description": [
+        "Developed full-stack e-commerce application with shopping cart, payment processing, and order management",
+        "Implemented secure authentication system using JWT and bcrypt",
+        "Built admin dashboard for inventory management and sales analytics",
+        "Deployed on AWS EC2 with automated backups and monitoring"
+      ]
+    },
+    {
+      "title": "Real-Time Chat Application",
+      "technologies": "Socket.io, React, Node.js, Redis, Docker",
+      "dates": "Sep 2023 -- Dec 2023",
+      "description": [
+        "Created scalable chat application supporting 10K+ concurrent users using WebSockets",
+        "Implemented Redis for session management and message caching",
+        "Built responsive UI with React supporting typing indicators and read receipts",
+        "Containerized application using Docker for easy deployment"
+      ]
+    }
+  ],
+  "skills": {
+    "skills_list": [
+      "Python",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "TypeScript",
+      "Django",
+      "Flask",
+      "FastAPI",
+      "Express.js",
+      "REST APIs",
+      "GraphQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Git",
+      "Agile/Scrum",
+      "Test-Driven Development",
+      "Microservices Architecture",
+      "System Design"
+    ],
+    "tools_list": [
+      "VS Code",
+      "Git/GitHub",
+      "Jira",
+      "Postman",
+      "Jenkins",
+      "Docker",
+      "AWS (EC2, S3, Lambda, RDS)",
+      "Nginx",
+      "Linux/Unix",
+      "Selenium",
+      "Jest",
+      "Pytest"
+    ]
+  }
+}

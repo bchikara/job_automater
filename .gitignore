@@ -1,0 +1,172 @@
+# ===================================
+# SENSITIVE FILES - NEVER COMMIT THESE
+# ===================================
+.env
+.env.local
+.env.*.local
+
+# User-specific configuration
+config.yaml
+config.local.py
+user_config.json
+
+# API Keys and Credentials
+**/credentials.json
+**/secrets.json
+
+# Browser profiles (contain cookies and session data)
+.job_agent_browser_profile/
+*_browser_profile/
+
+# ===================================
+# PYTHON
+# ===================================
+# Virtual environment
+venv/
+*/venv/
+.venv/
+*/.venv/
+env/
+ENV/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ===================================
+# OUTPUT AND GENERATED FILES
+# ===================================
+# Job application outputs
+output_documents/
+processed_applications/
+logs/
+
+# Generated PDFs and LaTeX auxiliary files
+*.pdf
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# Backup and temporary files
+*.json.backup
+*.json.bak
+*_backup.*
+*.tmp
+
+# User resume data
+base_resume.json
+base_resume.json.backup
+info/achievements.txt
+info/achievements.txt.backup
+templates/user_*.tex
+
+# ===================================
+# IDE AND EDITOR FILES
+# ===================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===================================
+# TESTING AND DEBUGGING
+# ===================================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+test_output/
+
+# ===================================
+# DATABASE
+# ===================================
+# Local MongoDB data
+mongodb_data/
+*.db
+
+# ===================================
+# DEVELOPMENT DOCS (Internal Notes)
+# ===================================
+# Keep only: README.md, SETUP_GUIDE.md, QUICKSTART.md, CONTRIBUTING.md, LICENSE
+# Ignore all development/debugging documentation
+
+AI_CAPABILITIES.md
+AI_GENERATED_ANSWERS.md
+BROWSER_PERSISTENCE_FIX.md
+BROWSER_PROFILE_SOLUTION.md
+BROWSER_USE_FINAL.md
+BROWSER_USE_FIXES_FINAL.md
+BROWSER_USE_SETUP.md
+BROWSER_USE_WORKING.md
+CHANGELOG.md
+CLI_FEATURES.md
+CLI_SHOWCASE.md
+CLI_USAGE.md
+DATE_AUTOCOMPLETE_FIX.md
+DEMO.md
+DOM_ERROR_FIXES.md
+FIELD_LABEL_MATCHING_FIX.md
+FILE_UPLOAD_EXPLAINED.md
+FILE_UPLOAD_NOW_WORKING.md
+FINAL_IMPROVEMENTS.md
+GEMINI_2.5_FLASH_LITE.md
+GEMINI_QUOTA_FIX.md
+GETTING_STARTED.md
+HYBRID_SYSTEM.md
+IMMEDIATE_FAILURE_FIX.md
+IMPROVEMENTS_NEEDED.md
+INTELLIGENT_ERROR_HANDLING.md
+LINKEDIN_POST.md
+OPEN_SOURCE_READY.md
+PERFORMANCE_FIXES.md
+QUICK_REFERENCE.md
+QUICK_START.md
+README_CLI.md
+SCROLLING_FIX.md
+SESSION_PERSISTENCE_FIX.md
+TEXTAREA_LOOP_AUTOCOMPLETE_VALIDATION_FIX.md
+TEXTAREA_REWRITE_CHARACTER_LIMIT_FIX.md
+THREE_CRITICAL_FIXES.md
+WEB_UI_SETTINGS.md
+WORKFLOW.md
+
+# Test/Debug scripts (unnecessary for production)
+test_*.py
+test_browser_*.py
+copy_chrome_profile.py
+extract_chrome_cookies.py
+fix_paths.py
+test_setup.sh
+TESTING_SETUP.md
+SETUP_TEST_COMMANDS.txt
+
+# ===================================
+# MISC
+# ===================================
+node_modules/
+.cache/

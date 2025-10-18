@@ -1,0 +1,180 @@
+# ===================================
+# JOB AGENT - CONFIGURATION FILE
+# ===================================
+# Copy this file to config.yaml and fill in your actual values
+# NEVER commit config.yaml - it contains sensitive information!
+
+# ===================================
+# REQUIRED: API CREDENTIALS
+# ===================================
+api:
+  # Google Gemini API Key (REQUIRED for AI features)
+  # Get your free API key: https://aistudio.google.com/app/apikey
+  gemini_api_key: "your_gemini_api_key_here"
+
+  # Gemini Model Name
+  # Options: gemini-2.5-flash-lite (recommended), gemini-1.5-flash, gemini-1.5-pro
+  gemini_model_name: "gemini-2.5-flash-lite"
+
+# ===================================
+# REQUIRED: PERSONAL INFORMATION
+# ===================================
+personal:
+  # Your Full Name
+  full_name: "John Doe"
+
+  # First and Last Name (used in form filling)
+  first_name: "John"
+  last_name: "Doe"
+
+  # Contact Information
+  email: "your.email@example.com"
+  phone: "5551234567"
+
+  # Physical Address
+  address:
+    street: "123 Main Street"
+    city: "New York"
+    state: "New York"
+    zip_code: "10001"
+    # Location (as displayed on resume)
+    display: "New York, NY"
+
+# ===================================
+# REQUIRED: PROFESSIONAL PROFILES
+# ===================================
+profiles:
+  linkedin: "https://linkedin.com/in/your-username"
+  github: "https://github.com/your-username"
+  website: ""  # Optional
+  leetcode: ""  # Optional
+
+# ===================================
+# REQUIRED: WORK AUTHORIZATION
+# ===================================
+work_authorization:
+  # Are you authorized to work in the US? (Yes or No)
+  authorized: "Yes"
+
+  # Do you require visa sponsorship? (Yes, No, Now, In the future)
+  requires_sponsorship: "No"
+
+# ===================================
+# REQUIRED: EDUCATION
+# ===================================
+education:
+  university: "New York University"
+  degree: "Master of Science in Computer Science"
+  location: "New York, NY"
+  dates: "Jan 2020 -- May 2024"
+
+# ===================================
+# REQUIRED: PROFESSIONAL BACKGROUND
+# ===================================
+professional:
+  # Years of professional experience
+  years_experience: 3
+
+  # Current or most recent job title
+  current_job_title: "Software Engineer"
+
+  # Your primary tech stack (comma-separated)
+  tech_stack: "Python, JavaScript, React, Node.js, Docker, AWS"
+
+  # Key achievement or impact statement
+  key_achievement: "Built scalable web applications serving 100K+ users"
+
+  # Your specializations or focus areas
+  specializations: "Full-stack development, cloud architecture, automation"
+
+  # Soft skills and strengths
+  soft_skills: "Strong problem-solving abilities, quick learner, excellent communicator"
+
+  # What drives you in your career?
+  career_passion: "building efficient, user-friendly solutions that solve real problems"
+
+# ===================================
+# OPTIONAL: DEMOGRAPHIC INFORMATION
+# ===================================
+demographics:
+  gender: "Prefer not to say"
+  race_ethnicity: "Prefer not to say"
+  veteran_status: "I am not a protected veteran"
+  disability_status: "I do not have a disability"
+
+# ===================================
+# OPTIONAL: JOB SCRAPING CREDENTIALS
+# ===================================
+scraping:
+  # LinkedIn Session Cookie (li_at cookie value)
+  linkedin_cookie: ""
+
+  # JobRight Cookie String
+  jobright_cookie: ""
+
+  # Job scraping limit per platform
+  job_limit: 25
+
+# ===================================
+# OPTIONAL: DATABASE CONFIGURATION
+# ===================================
+database:
+  # MongoDB Connection String
+  connection_string: "mongodb://localhost:27017/"
+
+  # Database Name
+  name: "job_agent_db"
+
+# ===================================
+# OPTIONAL: APPLICATION BEHAVIOR
+# ===================================
+application:
+  # Maximum number of jobs to process per run
+  max_jobs_per_run: 5
+
+  # Delay between applications (in seconds) to appear more human-like
+  delay:
+    min: 0
+    max: 0
+
+# ===================================
+# OPTIONAL: ADVANCED CONFIGURATION
+# ===================================
+advanced:
+  # Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  log_level: "INFO"
+
+  # Output directories (relative to project root)
+  output_dirs:
+    documents: "output_documents"
+    processed: "processed_applications"
+
+  # PDFLaTeX path (auto-detected on macOS, specify if needed)
+  pdflatex_path: ""
+
+  # Chrome paths (usually auto-detected)
+  chrome:
+    executable_path: ""
+    driver_path: ""
+    # Chrome User Data Directory (for browser session persistence)
+    # macOS: /Users/USERNAME/Library/Application Support/Google/Chrome
+    # Windows: C:\Users\USERNAME\AppData\Local\Google\Chrome\User Data
+    # Linux: /home/USERNAME/.config/google-chrome
+    user_data_dir: ""
+
+  # Custom user agent for web scraping (usually not needed)
+  user_agent: ""
+
+  # JobRight API Configuration
+  jobright:
+    max_position: 100
+    position_increment: 10
+    request_delay_seconds: 2.0
+
+# ===================================
+# OPTIONAL: ACCOUNT CREDENTIALS
+# ===================================
+credentials:
+  # Generic password for creating accounts on job sites (if needed)
+  # SECURITY WARNING: Use a disposable password, NOT your regular passwords!
+  password: ""

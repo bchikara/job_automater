@@ -1,0 +1,22 @@
+requests
+pymongo
+python-dotenv
+PyYAML
+linkedin-jobs-scraper
+selenium
+webdriver-manager
+google-generativeai
+PyPDF2
+reportlab
+beautifulsoup4
+langchain_google_genai
+
+# Browser-Use AI Dependencies
+browser-use>=0.1.0
+playwright>=1.40.0
+nest-asyncio>=1.5.8
+
+# CLI Dependencies
+click>=8.0.0
+rich>=13.0.0
+questionary>=2.0.0

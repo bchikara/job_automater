@@ -1,0 +1,15 @@
+#!/bin/bash
+# Job Agent CLI Clean Wrapper - Suppresses config logs
+
+# Get the directory where this script is located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Activate virtual environment if it exists
+if [ -d "$SCRIPT_DIR/.venv" ]; then
+    source "$SCRIPT_DIR/.venv/bin/activate"
+elif [ -d "$SCRIPT_DIR/venv" ]; then
+    source "$SCRIPT_DIR/venv/bin/activate"
+fi
+
+# Run the CLI and suppress INFO logs from config/utils
+python "$SCRIPT_DIR/cli.py" "$@" 2>&1 | grep -v "^INFO \[config.py\]" | grep -v "^INFO \[utils.py\]"

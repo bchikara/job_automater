@@ -1,0 +1,1172 @@
+[
+    {
+        "timestamp": "2025-05-09T01:40:59.723626Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "First Name",
+        "locator_type": "id",
+        "locator_value": "first_name",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T01:40:59.724540Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Last Name",
+        "locator_type": "id",
+        "locator_value": "last_name",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T01:40:59.724978Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Email",
+        "locator_type": "id",
+        "locator_value": "email",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T01:40:59.726033Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Phone",
+        "locator_type": "id",
+        "locator_value": "phone",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T01:40:59.726371Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "LinkedIn Profile",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_0_text_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T01:40:59.726694Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Website",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_1_text_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T01:40:59.727031Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Location (City)",
+        "locator_type": "id",
+        "locator_value": "auto_complete_input",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T01:40:59.727365Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Location Preference",
+        "locator_type": "name",
+        "locator_value": "job_application[answers_attributes][2][answer_selected_options_attributes][3][question_option_id]",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T01:40:59.727731Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Resume/CV",
+        "locator_type": "name",
+        "locator_value": "job_application[resume_text]",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T01:40:59.728051Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Have you been employed by Upstart before?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_3_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T01:40:59.728358Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Are you authorized to work lawfully in the United States for Upstart?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_4_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T01:40:59.728805Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Will you now or in the future require sponsorship for employment visa status?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_5_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T01:40:59.729195Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Gender",
+        "locator_type": "id",
+        "locator_value": "job_application_gender",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T01:40:59.729591Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Are you Hispanic/Latino?",
+        "locator_type": "id",
+        "locator_value": "job_application_hispanic_ethnicity",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T01:40:59.730056Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Please identify your race",
+        "locator_type": "id",
+        "locator_value": "job_application_race",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T01:40:59.730772Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Veteran Status",
+        "locator_type": "id",
+        "locator_value": "job_application_veteran_status",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T01:40:59.731311Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Disability Status",
+        "locator_type": "id",
+        "locator_value": "job_application_disability_status",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T02:52:55.543428Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "First Name",
+        "locator_type": "id",
+        "locator_value": "first_name",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T02:52:55.544242Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Last Name",
+        "locator_type": "id",
+        "locator_value": "last_name",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T02:52:55.544581Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Email",
+        "locator_type": "id",
+        "locator_value": "email",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T02:52:55.545210Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Phone",
+        "locator_type": "id",
+        "locator_value": "phone",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T02:52:55.545528Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "LinkedIn Profile",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_0_text_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T02:52:55.545838Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Website",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_1_text_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T02:52:55.546161Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Location (City)",
+        "locator_type": "name",
+        "locator_value": "job_application[location]",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T02:52:55.546462Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Location Preference",
+        "locator_type": "name",
+        "locator_value": "job_application[answers_attributes][2][answer_selected_options_attributes][3][question_option_id]",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T02:52:55.546972Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Resume/CV",
+        "locator_type": "name",
+        "locator_value": "job_application[resume_text]",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T02:52:55.547308Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Have you been employed by Upstart before?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_3_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T02:52:55.547631Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Are you authorized to work lawfully in the United States for Upstart?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_4_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T02:52:55.547988Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Will you now or in the future require sponsorship for employment visa status?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_5_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T02:52:55.548347Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Gender",
+        "locator_type": "id",
+        "locator_value": "job_application_gender",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T02:52:55.548701Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Are you Hispanic/Latino?",
+        "locator_type": "id",
+        "locator_value": "job_application_hispanic_ethnicity",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T02:52:55.549155Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Veteran Status",
+        "locator_type": "id",
+        "locator_value": "job_application_veteran_status",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T02:52:55.549744Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Disability Status",
+        "locator_type": "id",
+        "locator_value": "job_application_disability_status",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.618390Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "First Name",
+        "locator_type": "id",
+        "locator_value": "first_name",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.620705Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Last Name",
+        "locator_type": "id",
+        "locator_value": "last_name",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.621533Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Email",
+        "locator_type": "id",
+        "locator_value": "email",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.622273Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Phone",
+        "locator_type": "id",
+        "locator_value": "phone",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.629947Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "LinkedIn Profile",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_0_text_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.630703Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Website",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_1_text_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.631364Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Location (City)",
+        "locator_type": "id",
+        "locator_value": "auto_complete_input",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.632035Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Location Preference",
+        "locator_type": "name",
+        "locator_value": "job_application[answers_attributes][2][answer_selected_options_attributes][3][question_option_id]",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.632684Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Resume/CV",
+        "locator_type": "name",
+        "locator_value": "job_application[resume_text]",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.633259Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Have you been employed by Upstart before?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_3_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.633845Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Are you authorized to work lawfully in the United States for Upstart?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_4_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.634415Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Will you now or in the future require sponsorship for employment visa status?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_5_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.635000Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Gender",
+        "locator_type": "id",
+        "locator_value": "job_application_gender",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.635600Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Are you Hispanic/Latino?",
+        "locator_type": "id",
+        "locator_value": "job_application_hispanic_ethnicity",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.636207Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Please identify your race",
+        "locator_type": "id",
+        "locator_value": "job_application_race",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.636813Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Veteran Status",
+        "locator_type": "id",
+        "locator_value": "job_application_veteran_status",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:29:19.637446Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Disability Status",
+        "locator_type": "id",
+        "locator_value": "job_application_disability_status",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:33:19.322738Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "First Name",
+        "locator_type": "id",
+        "locator_value": "first_name",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:33:19.323521Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Last Name",
+        "locator_type": "id",
+        "locator_value": "last_name",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:33:19.323933Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Email",
+        "locator_type": "id",
+        "locator_value": "email",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:33:19.324328Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Phone",
+        "locator_type": "id",
+        "locator_value": "phone",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:33:19.324707Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "LinkedIn Profile",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_0_text_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:33:19.325225Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Website",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_1_text_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:33:19.325677Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Location (City)",
+        "locator_type": "name",
+        "locator_value": "job_application[location]",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:33:19.326125Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Location Preference",
+        "locator_type": "name",
+        "locator_value": "job_application[answers_attributes][2][answer_selected_options_attributes][3][question_option_id]",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:33:19.326556Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Resume/CV",
+        "locator_type": "name",
+        "locator_value": "job_application[resume_text]",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:33:19.327009Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Have you been employed by Upstart before?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_3_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:33:19.327474Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Are you authorized to work lawfully in the United States for Upstart?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_4_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:33:19.327912Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Will you now or in the future require sponsorship for employment visa status?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_5_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:33:19.328343Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Gender",
+        "locator_type": "id",
+        "locator_value": "job_application_gender",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:33:19.328791Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Are you Hispanic/Latino?",
+        "locator_type": "id",
+        "locator_value": "job_application_hispanic_ethnicity",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:33:19.329349Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Veteran Status",
+        "locator_type": "id",
+        "locator_value": "job_application_veteran_status",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-09T04:33:19.330070Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Disability Status",
+        "locator_type": "id",
+        "locator_value": "job_application_disability_status",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-14T19:51:54.684013Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "First Name",
+        "locator_type": "id",
+        "locator_value": "first_name",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-14T19:51:54.687064Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Last Name",
+        "locator_type": "id",
+        "locator_value": "last_name",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-14T19:51:54.688740Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Email",
+        "locator_type": "id",
+        "locator_value": "email",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-14T19:51:54.690184Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Phone",
+        "locator_type": "id",
+        "locator_value": "phone",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-14T19:51:54.691220Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "LinkedIn Profile",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_0_text_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-14T19:51:54.692160Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Website",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_1_text_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-14T19:51:54.693103Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Location (City)",
+        "locator_type": "id",
+        "locator_value": "auto_complete_input",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-14T19:51:54.694054Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Location Preference",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_2_answer_selected_options_attributes_3_question_option_id",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-14T19:51:54.695006Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Have you been employed by Upstart before?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_3_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-14T19:51:54.696230Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Are you authorized to work lawfully in the United States for Upstart?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_4_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-14T19:51:54.697170Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Will you now or in the future require sponsorship for employment visa status?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_5_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-14T19:51:54.698449Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Gender",
+        "locator_type": "id",
+        "locator_value": "job_application_gender",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-14T19:51:54.699379Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Are you Hispanic/Latino?",
+        "locator_type": "id",
+        "locator_value": "job_application_hispanic_ethnicity",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-14T19:51:54.700317Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Please identify your race",
+        "locator_type": "id",
+        "locator_value": "job_application_race",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-14T19:51:54.701219Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Veteran Status",
+        "locator_type": "id",
+        "locator_value": "job_application_veteran_status",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-05-14T19:51:54.702137Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Disability Status",
+        "locator_type": "id",
+        "locator_value": "job_application_disability_status",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.505405Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "First Name",
+        "locator_type": "id",
+        "locator_value": "first_name",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.510085Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Last Name",
+        "locator_type": "id",
+        "locator_value": "last_name",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.511535Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Email",
+        "locator_type": "id",
+        "locator_value": "email",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.512829Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Phone",
+        "locator_type": "id",
+        "locator_value": "phone",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.514131Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Location (City)",
+        "locator_type": "id",
+        "locator_value": "auto_complete_input",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.515426Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "LinkedIn Profile",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_0_text_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.516729Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Website",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_1_text_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.517902Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Are you located within a reasonable commute of any of our listed office locations?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_2_answer_selected_options_attributes_2_question_option_id",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.519062Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Will you now or in the future require SoFi to commence (\u201csponsor\u201d) an immigration case in order to employ you?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_3_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.520224Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Have you worked at or been a consultant for SoFi or any company subsequently acquired by a SoFi entity (including Galileo Financial Technologies, Technisys, Wyndham Capital Mortgage, Zenbanx, 8 Securities, and/or Golden Pacific Bancorp, Clara Lending)?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_4_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.521463Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Would you like to receive marketing communications about careers at SoFi and Galileo?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_5_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.522679Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Preferred Name (if different from legal name)",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_6_text_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.523906Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Are you authorized to lawfully work in the country where this role is located?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_7_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.525051Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "I acknowledge that by providing my phone number, I agree to receive text messages from SoFi Technologies in relation to this job application. Message frequency varies. Reply STOP to opt-out of future messaging. Reply HELP for help. Message and data rates may apply.",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_8_answer_selected_options_attributes_8_question_option_id",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.526149Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Are you currently employed with or have been employed by Deloitte? Deloitte is our external financial auditor and due diligence may be performed prior to employment to ensure independence requirements are met. If you indicate yes, you agree that certain information may need to be disclosed to Deloitte before employment to confirm independence.",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_9_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.527235Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Are you currently a SoFi, Galileo or Technisys employee?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_10_boolean_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.528355Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Date of Application (MM/DD/YY Format)",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_11_text_value",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.529529Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Do you currently hold, or intend to hold, any FINRA licenses if employed by SoFi? (i.e., Series 7, Series 24, Series 27, Series 99, etc.)",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_12_answer_selected_options_attributes_12_question_option_id",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.530719Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "What FINRA license(s), if any, do you currently hold?",
+        "locator_type": "id",
+        "locator_value": "job_application_answers_attributes_13_answer_selected_options_attributes_0_question_option_id",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.531911Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Hispanic or LatinX",
+        "locator_type": "xpath",
+        "locator_value": "//input[@value='4003286003' and @name='job_application[demographic_answers][][answer_options][][answer_option_id]']",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.533079Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "White",
+        "locator_type": "xpath",
+        "locator_value": "//input[@value='4003287003' and @name='job_application[demographic_answers][][answer_options][][answer_option_id]']",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.534301Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Native Hawaiian or Other Pacific Islander",
+        "locator_type": "xpath",
+        "locator_value": "//input[@value='4003288003' and @name='job_application[demographic_answers][][answer_options][][answer_option_id]']",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.535372Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Two or more races",
+        "locator_type": "xpath",
+        "locator_value": "//input[@value='4003289003' and @name='job_application[demographic_answers][][answer_options][][answer_option_id]']",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.536423Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Decline to Self Identify",
+        "locator_type": "xpath",
+        "locator_value": "//input[@value='4003290003' and @name='job_application[demographic_answers][][answer_options][][answer_option_id]']",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.537797Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "American Indian or Alaskan Native",
+        "locator_type": "xpath",
+        "locator_value": "//input[@value='4006433003' and @name='job_application[demographic_answers][][answer_options][][answer_option_id]']",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.539947Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Asian",
+        "locator_type": "xpath",
+        "locator_value": "//input[@value='4006434003' and @name='job_application[demographic_answers][][answer_options][][answer_option_id]']",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.541046Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Black or African American",
+        "locator_type": "xpath",
+        "locator_value": "//input[@value='4006435003' and @name='job_application[demographic_answers][][answer_options][][answer_option_id]']",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.542079Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Native Hawaiian or Other Pacific Islander",
+        "locator_type": "xpath",
+        "locator_value": "//input[@value='4006436003' and @name='job_application[demographic_answers][][answer_options][][answer_option_id]']",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.543098Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Hispanic or LatinX",
+        "locator_type": "xpath",
+        "locator_value": "//input[@value='4006437003' and @name='job_application[demographic_answers][][answer_options][][answer_option_id]']",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.544129Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "White",
+        "locator_type": "xpath",
+        "locator_value": "//input[@value='4006438003' and @name='job_application[demographic_answers][][answer_options][][answer_option_id]']",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.545145Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "I am not a veteran",
+        "locator_type": "xpath",
+        "locator_value": "//input[@value='4006439003' and @name='job_application[demographic_answers][][answer_options][][answer_option_id]']",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.546161Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "I identify as a veteran",
+        "locator_type": "xpath",
+        "locator_value": "//input[@value='4006440003' and @name='job_application[demographic_answers][][answer_options][][answer_option_id]']",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.547183Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "I don't wish to answer",
+        "locator_type": "xpath",
+        "locator_value": "//input[@value='4006441003' and @name='job_application[demographic_answers][][answer_options][][answer_option_id]']",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.548193Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "GDPR Demographic Data Consent",
+        "locator_type": "id",
+        "locator_value": "job_application_data_compliance_gdpr_demographic_data_consent_given",
+        "source": "AI-generated"
+    },
+    {
+        "timestamp": "2025-10-13T21:58:45.549007Z",
+        "job_id": "unknown_id",
+        "ats_platform": "Greenhouse",
+        "page_context": "Greenhouse Basic Info Form",
+        "field_label_or_description": "Security Code",
+        "locator_type": "id",
+        "locator_value": "security_code",
+        "source": "AI-generated"
+    }
+]
