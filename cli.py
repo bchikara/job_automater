@@ -37,6 +37,7 @@ from utils import setup_logging, create_dir_if_not_exists, sanitize_filename_com
 from scrapers import linkedin_scraper, jobright_scraper
 from resume_tailor import tailor as resume_tailor_module
 from document_generator import generator as document_generator_module
+from document_generator.generator_v2 import DocumentGeneratorV2  # V2 with ATS optimization
 from job_automator import automator_main
 
 # Initialize rich console
@@ -373,15 +374,16 @@ def generate_docs(job_id, interactive, batch):
                 description=f"📄 Processing: {company} - {title[:30]}..."
             )
 
-            # Process job silently
-            success, error_msg = _process_single_job_docs(job_data, primary_id)
+            # Process job silently with V2
+            success, error_msg, ats_score = _process_single_job_docs(job_data, primary_id)
 
-            # Store result for summary
+            # Store result for summary (including ATS score)
             job_results.append({
                 'company': company,
                 'title': title,
                 'success': success,
-                'error': error_msg if not success else None
+                'error': error_msg if not success else None,
+                'ats_score': ats_score
             })
 
             # Update progress
@@ -396,10 +398,10 @@ def generate_docs(job_id, interactive, batch):
 
 
 def _process_single_job_docs(job_data, primary_id):
-    """Process document generation for a single job silently
+    """Process document generation for a single job with V2 ATS optimization
 
     Returns:
-        tuple: (success: bool, error_message: str or None)
+        tuple: (success: bool, error_message: str or None, ats_score: int or None)
     """
     try:
         # Create output directory
@@ -415,46 +417,42 @@ def _process_single_job_docs(job_data, primary_id):
         create_dir_if_not_exists(output_dir)
 
         database.update_job_data(primary_id, {'job_specific_output_dir': str(output_dir)})
+        database.update_job_status(primary_id, config.JOB_STATUS_PROCESSING, "Starting V2 generation with ATS optimization.")
 
-        # Tailor documents
-        database.update_job_status(primary_id, config.JOB_STATUS_PROCESSING, "Starting tailoring.")
-        tailored_content = resume_tailor_module.generate_tailored_latex_docs(job_data)
+        # Use V2 generator (ATS >= 85, one-page, aggressive tailoring)
+        gen_v2 = DocumentGeneratorV2()
+        results = gen_v2.generate_all_documents(job_data, str(output_dir))
 
-        if not tailored_content or not tailored_content.get('resume'):
-            raise ValueError("AI returned no resume content")
-
-        database.update_job_data(primary_id, {
-            'tailored_resume_text': tailored_content.get('resume'),
-            'tailored_cover_letter_text': tailored_content.get('cover_letter')
-        })
-
-        # Generate PDFs
-        resume_path, cl_path, details_path = document_generator_module.create_documents(
-            job_data=job_data,
-            tailored_docs_latex=tailored_content,
-            target_output_directory=str(output_dir)
-        )
+        # Extract results
+        resume_path = results.get('resume_pdf')
+        cl_path = results.get('cover_letter_pdf')
+        details_path = results.get('job_details_pdf')
+        ats_score = results.get('ats_score', 0)
+        ats_report = results.get('ats_report', {})
 
         resume_ok = resume_path and Path(resume_path).is_file()
         details_ok = details_path and Path(details_path).is_file()
 
         if not resume_ok or not details_ok:
-            raise ValueError("PDF generation failed")
+            raise ValueError(f"V2 PDF generation failed (ATS: {ats_score}/100)")
 
+        # Store results with ATS data
         database.update_job_data(primary_id, {
             'resume_pdf_path': resume_path,
             'cover_letter_pdf_path': cl_path,
             'job_details_pdf_path': details_path,
+            'ats_score': ats_score,
+            'ats_keyword_stats': ats_report.get('keyword_stats', {}),
             'status': config.JOB_STATUS_DOCS_READY,
-            'status_reason': 'Documents generated via CLI'
+            'status_reason': f'V2 docs generated (ATS: {ats_score}/100) via CLI'
         })
 
-        return (True, None)
+        return (True, None, ats_score)
 
     except Exception as e:
         error_msg = str(e)[:100]
-        database.update_job_status(primary_id, config.JOB_STATUS_TAILORING_FAILED, str(e)[:200])
-        return (False, error_msg)
+        database.update_job_status(primary_id, config.JOB_STATUS_GENERATION_FAILED, str(e)[:200])
+        return (False, error_msg, None)
 
 
 def _display_generation_summary(job_results, total):
@@ -489,26 +487,51 @@ def _display_generation_summary(job_results, total):
     )
     console.print(summary_panel)
 
+    # Calculate average ATS score for successful jobs
+    successful_jobs = [r for r in job_results if r['success'] and r.get('ats_score')]
+    avg_ats = sum(r['ats_score'] for r in successful_jobs) / len(successful_jobs) if successful_jobs else 0
+
     # Detailed results table
     if total > 1:  # Only show table for batch operations
         console.print("\n[bold]Detailed Results:[/bold]\n")
 
         table = Table(box=box.ROUNDED, show_header=True, header_style="bold magenta")
         table.add_column("#", style="dim", width=4)
-        table.add_column("Company", style="cyan", width=25)
-        table.add_column("Title", style="blue", width=35)
+        table.add_column("Company", style="cyan", width=22)
+        table.add_column("Title", style="blue", width=30)
+        table.add_column("ATS Score", style="magenta", width=12)
         table.add_column("Status", style="yellow", width=15)
 
         for idx, result in enumerate(job_results, 1):
             status_display = "[green]✓ Success[/green]" if result['success'] else "[red]✗ Failed[/red]"
+
+            # ATS score display with color coding
+            ats_score = result.get('ats_score')
+            if ats_score:
+                if ats_score >= 90:
+                    ats_display = f"[bold green]{ats_score}/100[/bold green]"
+                elif ats_score >= 85:
+                    ats_display = f"[green]{ats_score}/100[/green]"
+                elif ats_score >= 80:
+                    ats_display = f"[yellow]{ats_score}/100[/yellow]"
+                else:
+                    ats_display = f"[red]{ats_score}/100[/red]"
+            else:
+                ats_display = "[dim]N/A[/dim]"
+
             table.add_row(
                 str(idx),
-                result['company'][:25],
-                result['title'][:35],
+                result['company'][:22],
+                result['title'][:30],
+                ats_display,
                 status_display
             )
 
         console.print(table)
+
+        # Show average ATS score
+        if avg_ats > 0:
+            console.print(f"\n[bold cyan]Average ATS Score:[/bold cyan] [bold]{avg_ats:.1f}/100[/bold]")
 
     # Show failed jobs details if any
     failed_jobs = [r for r in job_results if not r['success']]

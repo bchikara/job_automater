@@ -23,14 +23,17 @@ from . import browser_utils
 from .ats_fillers import base_filler # Import base for ApplicationError and type hinting
 from .ats_fillers import greenhouse_filler
 from .ats_fillers import workday_filler
-from .ats_fillers import hybrid_filler  # Import the new hybrid filler
-from .ats_fillers import universal_filler  # Import the new universal filler
+from .ats_fillers import browser_use_filler  # ✅ BROWSER-USE: AI agent with persistent sessions
+# from .ats_fillers import hybrid_filler  # Commented out - using browser-use instead
+# from .ats_fillers import universal_filler  # Commented out - using browser-use instead
+# from .ats_fillers import skyvern_filler  # Commented out - using browser-use instead
 # from .ats_fillers import lever_filler # Add more as implemented
 
 logger = logging.getLogger(__name__)
 
 # Check if Browser-Use is available
-BROWSER_USE_AVAILABLE = hybrid_filler.BROWSER_USE_AVAILABLE
+BROWSER_USE_AVAILABLE = browser_use_filler.BROWSER_USE_AVAILABLE
+# SKYVERN_AVAILABLE = skyvern_filler.SKYVERN_AVAILABLE  # Commented out - not using Skyvern
 
 # Map platform names (lowercase) from ats_identifier to filler classes
 ATS_FILLER_MAP = {
@@ -40,9 +43,16 @@ ATS_FILLER_MAP = {
     # Add mappings here...
 }
 
-# USE UNIVERSAL FILLER - Works with ANY ATS platform
-USE_UNIVERSAL_FILLER = False  # Set to False to use platform-specific fillers
-USE_HYBRID_MODE = True  # Only used if USE_UNIVERSAL_FILLER is False - Uses Browser-Use AI
+# ===================== AGENT SELECTION =====================
+# Choose which AI agent to use for job applications
+# ✅ BROWSER-USE: AI agent with persistent browser sessions (Playwright + Gemini)
+USE_BROWSER_USE = True  # ✅ ENABLED: Browser-use library (works with any ATS)
+# USE_SKYVERN = False  # Commented out - using browser-use instead
+# USE_UNIVERSAL_FILLER = False  # Commented out - using browser-use instead
+# USE_HYBRID_MODE = False  # Commented out - using browser-use instead
+
+# Priority: BROWSER_USE > TRADITIONAL
+# Browser-use uses Playwright with persistent sessions at: /Users/vipul/.job_agent_chrome_profile
 
 def _move_processed_folder(source_dir: str | Path, dest_base_dir: str | Path):
     """Moves the job document folder to the appropriate processed directory."""
@@ -118,8 +128,8 @@ def attempt_application(job_data: dict, processed_paths: dict) -> str:
     database.update_job_status(primary_id, config.JOB_STATUS_APP_IN_PROGRESS, "Identifying ATS platform.")
     ats_platform = ats_identifier.identify_ats_platform(application_url)
 
-    # If using Hybrid or Universal mode, we don't need to identify ATS (Browser-Use works with any platform)
-    if not ats_platform and not USE_HYBRID_MODE and not USE_UNIVERSAL_FILLER:
+    # If using Skyvern, Hybrid, or Universal mode, we don't need to identify ATS (AI works with any platform)
+    if not ats_platform and not USE_SKYVERN and not USE_HYBRID_MODE and not USE_UNIVERSAL_FILLER:
         logger.warning(f"{log_prefix}Could not identify ATS platform. Moving to failure.")
         final_status = config.JOB_STATUS_APP_FAILED_ATS; status_reason = "ATS platform not identified"
         moved_path = _move_processed_folder(source_doc_dir, processed_paths["failure"])
@@ -127,24 +137,30 @@ def attempt_application(job_data: dict, processed_paths: dict) -> str:
         database.update_job_data(primary_id, {'status': final_status, 'status_reason': status_reason, 'job_specific_output_dir': final_folder_path})
         return final_status
 
-    # If ATS not identified but using hybrid/universal, set generic name
+    # If ATS not identified but using AI agent, set generic name
     if not ats_platform:
         ats_platform = "unknown"
-        logger.info(f"{log_prefix}ATS platform unknown, but using Browser-Use AI which works with any platform")
+        logger.info(f"{log_prefix}ATS platform unknown, but using AI agent which works with any platform")
 
-    # Choose filler strategy
-    if USE_UNIVERSAL_FILLER:
-        logger.info(f"{log_prefix}Using UNIVERSAL FILLER (Works with ANY ATS)")
-        FillerClass = universal_filler.UniversalFiller
-        use_hybrid = False
-    elif USE_HYBRID_MODE:
-        logger.info(f"{log_prefix}Using HYBRID mode (Browser-Use AI + Selenium)")
-        FillerClass = hybrid_filler.HybridFiller
-        use_hybrid = True
+    # Choose filler strategy (priority: BROWSER_USE > TRADITIONAL)
+    use_browser_use = False
+
+    if USE_BROWSER_USE and BROWSER_USE_AVAILABLE:
+        logger.info(f"{log_prefix}✅ Using BROWSER-USE (AI agent with Playwright + persistent sessions)")
+        FillerClass = browser_use_filler.BrowserUseFiller
+        use_browser_use = True
+    elif USE_BROWSER_USE and not BROWSER_USE_AVAILABLE:
+        logger.error(f"{log_prefix}BROWSER-USE selected but not available! Install: pip install browser-use")
+        logger.error(f"{log_prefix}NO FALLBACK - Browser-use is required. Application will fail.")
+        final_status = config.JOB_STATUS_ERROR_UNKNOWN
+        status_reason = "Browser-use not available (install: pip install browser-use)"
+        moved_path = _move_processed_folder(source_doc_dir, processed_paths["failure"])
+        final_folder_path = moved_path
+        database.update_job_data(primary_id, {'status': final_status, 'status_reason': status_reason, 'job_specific_output_dir': final_folder_path})
+        return final_status
     else:
         logger.info(f"{log_prefix}Using TRADITIONAL mode (Selenium only)")
         FillerClass = ATS_FILLER_MAP.get(ats_platform)
-        use_hybrid = False
 
         if not FillerClass:
             logger.warning(f"{log_prefix}No ATS filler implemented for '{ats_platform}'. Moving to failure.")
@@ -175,18 +191,24 @@ def attempt_application(job_data: dict, processed_paths: dict) -> str:
     error_details = "Process started but did not complete successfully."
     try:
         database.update_job_status(primary_id, config.JOB_STATUS_APP_IN_PROGRESS, f"Initializing {ats_platform} filler.")
-        driver = browser_utils.get_webdriver() # Uses defaults from browser_utils
-        if not driver: raise base_filler.ApplicationError("Failed to initialize WebDriver.", config.JOB_STATUS_ERROR_UNKNOWN)
+
+        # Only create Selenium WebDriver if NOT using AI agents that manage their own browsers
+        # Browser-use uses Playwright with its own browser management
+        if not use_browser_use:
+            driver = browser_utils.get_webdriver() # Uses defaults from browser_utils
+            if not driver: raise base_filler.ApplicationError("Failed to initialize WebDriver.", config.JOB_STATUS_ERROR_UNKNOWN)
 
         # TODO: Fetch credentials if FillerClass.requires_login() is True
         credentials = None
 
         logger.info(f"{log_prefix}Instantiating and running {FillerClass.__name__}...")
 
-        # HybridFiller needs ats_platform parameter, UniversalFiller and others don't
-        if use_hybrid:
-            filler = FillerClass(driver, job_data, user_profile, document_paths, credentials, ats_platform=ats_platform)
+        # Different fillers have different signatures
+        if use_browser_use:
+            # BrowserUseFiller doesn't need driver (uses its own Playwright browser)
+            filler = FillerClass(job_data, user_profile, document_paths, credentials)
         else:
+            # Traditional fillers need driver
             filler = FillerClass(driver, job_data, user_profile, document_paths, credentials)
 
         application_result_status = filler.apply() # This should return a JOB_STATUS_* string
@@ -228,7 +250,10 @@ def attempt_application(job_data: dict, processed_paths: dict) -> str:
         error_details = f"Unexpected Exception: {str(e)[:500]}"
         status_reason = error_details
     finally:
-        browser_utils.close_webdriver() # Ensure browser closes
+        # Only close Selenium WebDriver if it was created
+        # Skyvern manages its own browser lifecycle
+        if not use_skyvern:
+            browser_utils.close_webdriver() # Ensure browser closes
 
     # --- 5. Handle Final Outcome ---
     # --- 5. Handle Final Outcome ---

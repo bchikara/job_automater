@@ -90,12 +90,15 @@ class BrowserUseSessionManager:
             if config.CHROME_USER_DATA_DIR:
                 app_profile_dir = Path(config.CHROME_USER_DATA_DIR)
                 self.logger.info(f"Using Chrome user data directory from config: {app_profile_dir}")
+                self.logger.warning("⚠️  Using main Chrome profile - CLOSE ALL Chrome windows before running job-agent!")
+                self.logger.warning("⚠️  If browser doesn't open, Chrome may be locked by another instance.")
             else:
                 app_profile_dir = Path.home() / '.job_agent_browser_profile'
                 self.logger.info(f"Using default profile directory: {app_profile_dir}")
 
             app_profile_dir.mkdir(parents=True, exist_ok=True)
             self.logger.info(f"✓ Profile directory ready: {app_profile_dir}")
+            self.logger.info(f"✓ Browser will open in VISIBLE mode (headless=False)")
 
             # Create browser profile (shared across all agents)
             # Using the SAME user_data_dir means browser-use reuses the same browser!

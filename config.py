@@ -69,6 +69,7 @@ def get_config(yaml_path, env_var, default=''):
 LINKEDIN_SESSION_COOKIE = get_config('scraping.linkedin_cookie', 'LINKEDIN_LI_AT_COOKIE')
 JOBRIGHT_COOKIE_STRING = get_config('scraping.jobright_cookie', 'JOBRIGHT_COOKIE_STRING')
 GEMINI_API_KEY = get_config('api.gemini_api_key', 'GEMINI_API_KEY')
+SKYVERN_API_KEY = get_config('api.skyvern_api_key', 'SKYVERN_API_KEY', '')
 
 # --- Database (MongoDB) ---
 MONGODB_CONNECTION_STRING = get_config('database.connection_string', 'MONGODB_CONNECTION_STRING', "mongodb://localhost:27017/")
