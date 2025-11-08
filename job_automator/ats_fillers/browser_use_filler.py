@@ -205,7 +205,7 @@ class BrowserUseFiller:
         }
 
     def _create_agent_task(self, user_info: Dict) -> str:
-        """Create concise, action-oriented task for AI agent following browser-use best practices"""
+        """Create simple, high-level task for AI agent - let the AI figure out HOW to do it"""
 
         # Get file paths
         resume_path = user_info.get('resume_path', '')
@@ -213,70 +213,35 @@ class BrowserUseFiller:
 
         # Get job context
         job_title = self.job_data.get('job_title', 'this position')
-        company_name = self.job_data.get('company_name', 'your company')
-        job_description = self.job_data.get('job_description', '')[:400]
+        company_name = self.job_data.get('company_name', 'this company')
 
         task = f"""
-Go to {self.job_data.get('application_url')} and complete the job application form.
+Apply to the {job_title} position at {company_name}.
 
-## CANDIDATE INFO:
-- **Name**: {user_info['first_name']} {user_info['last_name']} (use EXACT parts for "First Name"/"Last Name" fields)
-- **Email**: {user_info['email']}
-- **Phone**: {user_info['phone']}
-- **Location**: {user_info['city']}, {user_info['state']} {user_info['zip_code']} (split correctly: City={user_info['city']}, State={user_info['state']}, Zip={user_info['zip_code']})
-- **LinkedIn**: {user_info['linkedin']}
-- **Resume**: {resume_path}
-- **Work Authorization**: {user_info['work_authorized']} | **Sponsorship**: {user_info['require_sponsorship']}
+Application URL: {self.job_data.get('application_url')}
 
-## JOB CONTEXT:
-- Applying for: {job_title} at {company_name}
-- Background: {config.JOB_TITLE_CURRENT} | {config.YEARS_EXPERIENCE}+ years | Tech: {config.TECH_STACK}
+Your Information:
+- Name: {user_info['first_name']} {user_info['last_name']}
+- Email: {user_info['email']}
+- Phone: {user_info['phone']}
+- Location: {user_info['city']}, {user_info['state']} {user_info['zip_code']}
+- LinkedIn: {user_info['linkedin']}
+- GitHub: {user_info.get('github', '')}
+- Resume: {resume_path}
+- Work Authorization: {user_info['work_authorized']}
+- Require Sponsorship: {user_info['require_sponsorship']}
+- Years of Experience: {config.YEARS_EXPERIENCE}
+- Current Title: {config.JOB_TITLE_CURRENT}
 
-## INSTRUCTIONS:
-**1. Navigate & Start**
-   - Click "Apply" or "Start Application" button
-   - Check ALL agreement/consent checkboxes immediately
-   - Login if needed: {user_info['email']} / {config.YOUR_PASSWORD}
+Instructions:
+1. Navigate to the application URL
+2. Click the apply button to start
+3. Fill out the entire application form with the information above
+4. Upload the resume when asked
+5. For demographic questions (gender, race, veteran status, disability), select "Prefer not to answer" if available
+6. Submit the application when complete
 
-**2. SYSTEMATIC Form Filling (CRITICAL - Follow This Order!)**
-   PHASE 1: Fill ALL visible required fields FIRST
-   - Name, Email, Phone, Resume upload (PRIORITY - do these first!)
-   - LinkedIn, Location, Start Date
-   - Work authorization, Sponsorship questions
-
-   PHASE 2: Scroll & continue ONLY after Phase 1 complete
-   - Scroll down ONCE (800px)
-   - Fill all newly visible required fields
-   - Repeat: Fill visible → Scroll → Fill visible
-
-   PHASE 3: Optional fields (if form requires them)
-   - Gender, Race, Veteran, Disability: Use "Prefer not to answer" / "I do not want to answer"
-   - NEVER get stuck on optional fields - select first option if needed
-
-**3. Field-Specific Rules**
-   - Autocomplete (city/school): Type 3-4 chars → wait 2s → click dropdown
-   - Dates: Always MM/DD/YYYY format (12/17/2025)
-   - Textareas: If already filled, SKIP IT
-   - Resume: Retry 3x if upload fails
-
-**4. Submit Strategy**
-   - When you see "Submit Application" button → click it
-   - If errors appear: fix ONLY the mentioned fields, then submit again
-   - Don't scroll more than 2x looking for submit button
-
-## CRITICAL RULES:
-- **Field Matching**: "First Name" field = first name ONLY (not full name!)
-- **Autocomplete Wait**: Always wait 2s for dropdown before selecting
-- **Textarea Check**: If field already has text, SKIP it (don't refill)
-- **Resume Upload**: Retry up to 3 times if upload fails
-- **Error Recovery**: Read error messages, fix missing fields, resubmit
-
-## SUCCESS CRITERIA:
-- Form submitted successfully
-- Confirmation message or "thank you" page appears
-- No error messages visible
-
-Start now and complete the application.
+Complete the application and confirm it was submitted successfully.
 """
         return task
 

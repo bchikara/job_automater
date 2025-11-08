@@ -128,8 +128,8 @@ def attempt_application(job_data: dict, processed_paths: dict) -> str:
     database.update_job_status(primary_id, config.JOB_STATUS_APP_IN_PROGRESS, "Identifying ATS platform.")
     ats_platform = ats_identifier.identify_ats_platform(application_url)
 
-    # If using Skyvern, Hybrid, or Universal mode, we don't need to identify ATS (AI works with any platform)
-    if not ats_platform and not USE_SKYVERN and not USE_HYBRID_MODE and not USE_UNIVERSAL_FILLER:
+    # If using browser-use AI agent, we don't need to identify ATS (AI works with any platform)
+    if not ats_platform and not USE_BROWSER_USE:
         logger.warning(f"{log_prefix}Could not identify ATS platform. Moving to failure.")
         final_status = config.JOB_STATUS_APP_FAILED_ATS; status_reason = "ATS platform not identified"
         moved_path = _move_processed_folder(source_doc_dir, processed_paths["failure"])
